@@ -1,0 +1,34 @@
+.header {
+  background-color: black;
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  &__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner_textbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+}
