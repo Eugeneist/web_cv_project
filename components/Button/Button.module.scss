@@ -1,0 +1,56 @@
+.button {
+  width: 9rem;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px 10px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #000;
+  color: #d4b44f;
+  transition: width 0.3s ease;
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #d4b44f; /* Колір бордера */
+  z-index: 0;
+  transition: width 0.3s ease; /* Тривалість та тип переходу анімації */
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.button:hover {
+  color: #000;
+  font-weight: bold;
+  transition: width 0.3s ease;
+}
+
+.label::after {
+  content: url(../../assets/arrow.svg);
+  position: absolute;
+  top: 60%;
+  right: 0;
+  transform: translate(100%, -50%);
+  opacity: 0; /* Текст невидимий спочатку */
+  transition: opacity 0.3s ease; /* Тривалість та тип переходу анімації */
+}
+
+.button:hover .label::after {
+  opacity: 1; /* Текст з'являється при наведенні */
+}

@@ -1,17 +1,19 @@
 .header {
-  background-color: black;
+  // background-color: #4f709c;
+  // dark mode:
+  background-color: rgba($color: #000000, $alpha: 0.7);
   width: 100%;
   height: 35vh;
   display: flex;
   align-items: end;
   justify-content: center;
+  // border-bottom: 1px solid gray;
 
   &__inner {
     max-width: 1440px;
     margin: 0 auto;
     color: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
   }
 
@@ -25,10 +27,12 @@
   &__title {
     text-transform: uppercase;
     font-size: 3rem;
+    color: #d4b44f;
   }
 
   &__text {
     text-transform: uppercase;
     font-size: 1.8rem;
+    color: #f5efdf;
   }
 }

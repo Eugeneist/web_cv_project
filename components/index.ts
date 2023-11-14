@@ -1,2 +1,3 @@
 export { Header } from './Header';
-export { InfoCV } from './InfoCV';
+export { Navbar } from './Navbar';
+export { Button } from './Button';

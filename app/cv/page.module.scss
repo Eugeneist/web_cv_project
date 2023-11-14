@@ -1,0 +1,59 @@
+@keyframes textAnimation {
+  0% {
+    color: #000;
+  }
+  15% {
+    color: #060552;
+  }
+  30% {
+    color: #090979;
+  }
+  50% {
+    color: #0c0ca2;
+  }
+  65% {
+    color: #090979;
+  }
+  90% {
+    color: #060552;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+.info {
+  max-width: 1440px;
+  width: 100%;
+  min-width: 100vw;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+
+  &__columns {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__about {
+    text-align: center;
+    padding: 5px 5px 20px 5px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    // color: #363f6d;
+    // animation: textAnimation 4s infinite;
+
+    // dark theme:
+
+    color: #d4b44f;
+
+    :first-child {
+      background-color: transparent;
+    }
+  }
+}
