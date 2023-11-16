@@ -1,0 +1,52 @@
+.project_min {
+  width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+  gap: 10px;
+  background-color: rgba(51, 51, 49, 0.8);
+  border-radius: 25px;
+  padding: 15px;
+
+  &__techlist {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    overflow-wrap: break-word;
+
+    li {
+      margin-right: 10px;
+      margin-bottom: 5px;
+
+      ::after {
+        content: ',';
+      }
+
+      &:last-child ::after {
+        content: '.';
+      }
+    }
+  }
+
+  &__techbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__linkbox {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__title {
+    color: #f4e6c2;
+  }
+}
