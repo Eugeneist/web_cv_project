@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components';
 import { Certificate } from '@/components';
 import { ProjectsList } from '@/components';
 import styles from './page.module.scss';
+import cv from '../../assets/cv.svg';
 
 const cerificates = [
   {
@@ -58,7 +60,7 @@ const projects = [
       'React',
       'TypeScript',
       'Redux',
-      'MUI',
+      'Material UI',
       'SCSS modules',
       'AXIOS',
       'React Router',
@@ -73,21 +75,90 @@ const projects = [
 const CV = () => {
   return (
     <section className={styles.info}>
-      <article className={styles.info__about}>
-        <h2 className={styles.info__title}>
-          <Link className={styles.info__link} href="/cv/about">
-            <Button label="About" />
-          </Link>
-        </h2>
-        <p className={styles.info__about_text}>
-          Enthusiastic and dedicated Frontend (React) Developer with a passion
-          for creating engaging and user-friendly web applications. My name is
-          Yevhen, and I completed courses at Hillel IT-School, have a higher
-          technical education. I am actively seeking opportunities to contribute
-          my skills for crafting seamless and interactive user experiences.
-        </p>
-      </article>
-      <section className={styles.info__columns}>
+      <section className={styles.info__sections}>
+        <section className={styles.info__section_about}>
+          <div className={styles.info__section_box}>
+            <article className={styles.info__about}>
+              <h2 className={styles.info__title}>
+                <Link className={styles.info__link} href="/cv/about">
+                  <Button label="About" />
+                </Link>
+              </h2>
+              <p className={styles.info__about_text}>
+                Hi! My name is <span className={styles.colored}>Yevhen</span>!{' '}
+                <br />I am enthusiastic and dedicated{' '}
+                <span className={styles.colored}>
+                  Frontend (React) Developer
+                </span>{' '}
+                with a passion for creating engaging and user-friendly web
+                applications. I was completed courses at Hillel IT-School, have
+                a higher technical education. I am actively seeking
+                opportunities to contribute my skills for crafting seamless and
+                interactive user experiences.
+              </p>
+            </article>
+          </div>
+          <article className={styles.info__education}>
+            <h2 className={styles.info__title}>
+              <Link className={styles.info__link} href="/cv/education">
+                <Button label="Education" />
+              </Link>
+            </h2>
+            <ol className={styles.info__education_list}>
+              <li className={styles.info__education_main}>
+                <h4 className={styles.colored}>
+                  National Technical University «Kharkiv Polytechnic Institute»
+                </h4>
+                <p className={styles.info__education_text}>
+                  Mechanical Engineering, Masters Degree
+                </p>
+              </li>
+              <li>
+                <ul className={styles.info__certificatelist}>
+                  {cerificates.map((cerificate) => (
+                    <li key={cerificate.id}>
+                      <Certificate
+                        title={cerificate.title}
+                        description={cerificate.description}
+                        link={cerificate.link}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            </ol>
+          </article>
+          <article className={styles.info__more}>
+            <h2 className={styles.info__title}>
+              <Link className={styles.info__link} href="/cv/more">
+                <Button label="More" />
+              </Link>
+            </h2>
+            <div className={styles.info__more_box}>
+              <div className={styles.info__more_cv}>
+                <h4 className={styles.colored}>Download CV:</h4>
+                <Link
+                  className={styles.info__more_image}
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1ABvaEYNwM-2YcJgSYJnCfGAgJVt4X-QY/view"
+                >
+                  <Image src={cv} width={32} height={32} alt="cv link" />
+                </Link>
+              </div>
+              <Link className={styles.info__link} href="/">
+                <Button label="GO HOME" />
+              </Link>
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2 className={styles.info__title}>
+            <Link className={styles.info__link} href="/cv/projects">
+              <Button label="Projects" />
+            </Link>
+          </h2>
+          <ProjectsList projects={projects} />
+        </section>
         <section>
           <article className={styles.info__skills}>
             <h2 className={styles.info__title}>
@@ -103,7 +174,7 @@ const CV = () => {
               <li>Next.js</li>
               <li>Redux</li>
               <li>GIT</li>
-              <li>MUI/Chakra UI</li>
+              <li>Material UI/Chakra UI</li>
               <li>Figma</li>
               <li>responsible/adaptive design</li>
               <li>semantic layout</li>
@@ -117,51 +188,15 @@ const CV = () => {
               </Link>
             </h2>
             <ul className={styles.info__languages_list}>
-              <li>English - Intermediate(B2)</li>
-              <li>Ukrainian - Native</li>
-              <li>Russian - Native</li>
+              <li>
+                <span className={styles.colored}>English</span> -
+                Intermediate(B2)
+              </li>
+              <li>
+                <span className={styles.colored}>Ukrainian</span> - Native
+              </li>
             </ul>
           </article>
-          <article className={styles.info__education}>
-            <h2 className={styles.info__title}>
-              <Link className={styles.info__link} href="/cv/education">
-                <Button label="Education" />
-              </Link>
-            </h2>
-            <div className={styles.info__education_list}>
-              <div className={styles.info__education_main}>
-                <h4>
-                  National Technical University «Kharkiv Polytechnic Institute»
-                </h4>
-                <p className={styles.info__education_text}>
-                  Mechanical Engineering, Masters Degree
-                </p>
-              </div>
-              <div>
-                <ul className={styles.info__certificatelist}>
-                  {cerificates.map((cerificate) => (
-                    <li key={cerificate.id}>
-                      <Certificate
-                        title={cerificate.title}
-                        description={cerificate.description}
-                        link={cerificate.link}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </article>
-        </section>
-        <section>
-          <h2 className={styles.info__title}>
-            <Link className={styles.info__link} href="/cv/projects">
-              <Button label="Projects" />
-            </Link>
-          </h2>
-          <ProjectsList projects={projects} />
-        </section>
-        <section>
           <nav className={styles.info__contacts}>
             <h2 className={styles.info__title}>
               <Link className={styles.info__link} href="/cv/contacts">
@@ -169,36 +204,37 @@ const CV = () => {
               </Link>
             </h2>
             <ul className={styles.info__contacts_list}>
-              <li>
-                <a href="tel:+380508336633">+38 (050) 833-66-33</a>
+              <li className={styles.info__contacts_link}>
+                <Link target="_blank" href="tel:+380508336633">
+                  +38 (050) 833-66-33
+                </Link>
               </li>
-              <li>
-                <a href="mailto:rudofiloveugene@gmail.com">
+              <li className={styles.info__contacts_link}>
+                <Link target="_blank" href="mailto:rudofiloveugene@gmail.com">
                   rudofiloveugene@gmail.com
-                </a>
+                </Link>
               </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/yevhen-rudofylov-ba8010166/"
+              <li className={styles.info__contacts_link}>
+                <Link
                   target="_blank"
+                  href="https://www.linkedin.com/in/yevhen-rudofylov-ba8010166/"
                 >
                   LinkedIn
-                </a>
+                </Link>
               </li>
-              <li>
-                <a href="https://github.com/Eugeneist" target="_blank">
+              <li className={styles.info__contacts_link}>
+                <Link target="_blank" href="https://github.com/Eugeneist">
                   GitHub
-                </a>
+                </Link>
               </li>
-              <li>
-                <a href="tg://resolve?domain=rudofylov" target="_blank">
+              <li className={styles.info__contacts_link}>
+                <Link target="_blank" href="tg://resolve?domain=rudofylov">
                   Telegram
-                </a>
+                </Link>
               </li>
-              <li>Kharkiv, Ukraine</li>
+              <li className={styles.info__contacts_link}>Ukraine</li>
             </ul>
           </nav>
-          <div>QR</div>
         </section>
       </section>
     </section>

@@ -20,7 +20,7 @@
     overflow-wrap: break-word;
 
     li {
-      margin-right: 10px;
+      margin-right: 5px;
       margin-bottom: 5px;
 
       ::after {
@@ -40,13 +40,30 @@
 
   &__linkbox {
     display: flex;
+    gap: 15px;
   }
 
   &__link {
     display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    color: #f4e6c2;
+  }
+
+  &__image {
+    transition: all 0.6s ease;
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.6s ease;
+    }
   }
 
   &__title {
     color: #f4e6c2;
+
+    &_tech {
+      color: #f4e6c2;
+    }
   }
 }

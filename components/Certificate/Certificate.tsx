@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Certificate.module.scss';
 
 interface CertificateProps {
@@ -15,9 +16,9 @@ const Certificate: React.FC<CertificateProps> = ({
     <article className={styles.cerificate}>
       <h4 className={styles.certificate__title}>{title}</h4>
       <p className={styles.certificate__description}>{description}</p>
-      <a className={styles.certificate__link} href={link}>
+      <Link target="_blank" className={styles.certificate__link} href={link}>
         Certificate
-      </a>
+      </Link>
     </article>
   );
 };

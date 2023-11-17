@@ -1,5 +1,5 @@
 @mixin sharedListStyles {
-  width: 15rem;
+  // width: 15rem;
   background-color: rgba(51, 51, 49, 0.8);
   border-radius: 25px;
   padding: 15px;
@@ -15,20 +15,21 @@
   justify-content: center;
   flex-direction: column;
   font-size: 14px;
+  line-height: 20px;
 
-  &__columns {
+  &__sections {
     display: flex;
     justify-content: space-around;
+    gap: 5px;
   }
 
   &__about {
-    text-align: center;
-    padding: 5px 5px 20px 5px;
+    padding: 5px 5px 15px 5px;
 
     &_text {
       text-align: start;
       @include sharedListStyles;
-      width: 100%;
+      width: 32rem;
       padding: 18px;
     }
   }
@@ -59,6 +60,7 @@
     &_main {
       padding-bottom: 10px;
     }
+    padding-bottom: 15px;
   }
 
   &__certificatelist {
@@ -86,5 +88,42 @@
       @include sharedListStyles;
     }
     padding-bottom: 10px;
+
+    &_link {
+      :hover {
+        color: #d4b44f;
+      }
+    }
   }
+
+  &__more {
+    &_box {
+      @include sharedListStyles;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 15px;
+    }
+
+    &_cv {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    padding-bottom: 15px;
+
+    &_image {
+      transition: all 0.6s ease;
+      &:hover {
+        transform: scale(1.3);
+        transition: all 0.6s ease;
+      }
+    }
+  }
+}
+
+.colored {
+  color: #f4e6c2;
 }
