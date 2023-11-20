@@ -90,11 +90,12 @@ const CV = () => {
                 <span className={styles.colored}>
                   Frontend (React) Developer
                 </span>{' '}
-                with a passion for creating engaging and user-friendly web
-                applications. I was completed courses at Hillel IT-School, have
-                a higher technical education. I am actively seeking
-                opportunities to contribute my skills for crafting seamless and
-                interactive user experiences.
+                from Ukraine! I have a passion for creating engaging,
+                user-friendly and beautiful web applications and websites. I
+                have completed courses and have a higher technical education. I
+                am learning new things every day! I am actively seeking
+                opportunities to contribute my skills for creating amazing
+                projects!
               </p>
             </article>
           </div>
@@ -136,7 +137,11 @@ const CV = () => {
             </h2>
             <div className={styles.info__more_box}>
               <div className={styles.info__more_cv}>
-                <h4 className={styles.colored}>Download CV:</h4>
+                <h4
+                  className={`${styles.colored} + ${styles.info__more_title}`}
+                >
+                  Download CV:
+                </h4>
                 <Link
                   className={styles.info__more_image}
                   target="_blank"

@@ -121,6 +121,10 @@
         transition: all 0.6s ease;
       }
     }
+
+    &_title {
+      text-transform: uppercase;
+    }
   }
 }
 

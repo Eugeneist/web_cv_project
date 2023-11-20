@@ -1,0 +1,29 @@
+.about {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    margin: 0 auto;
+    gap: 15px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    padding-bottom: 25px;
+  }
+
+  &__text {
+    max-width: 25rem;
+    font-size: 0.9rem;
+  }
+}

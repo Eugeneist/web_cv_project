@@ -1,0 +1,28 @@
+@mixin anim {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wall {
+  &_1 {
+    @include anim;
+    background-color: #000;
+    z-index: 30;
+  }
+
+  &_2 {
+    @include anim;
+    background-color: #d4b44f;
+    z-index: 20;
+  }
+
+  &_3 {
+    @include anim;
+    background-color: #f4e6c2;
+    z-index: 10;
+  }
+}

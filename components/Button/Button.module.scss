@@ -27,9 +27,9 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #d4b44f; /* Колір бордера */
+  background-color: #d4b44f;
   z-index: 0;
-  transition: width 0.3s ease; /* Тривалість та тип переходу анімації */
+  transition: width 0.3s ease;
 }
 
 .button:hover::before {
@@ -48,10 +48,10 @@
   top: 60%;
   right: 0;
   transform: translate(100%, -50%);
-  opacity: 0; /* Текст невидимий спочатку */
-  transition: opacity 0.3s ease; /* Тривалість та тип переходу анімації */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .button:hover .label::after {
-  opacity: 1; /* Текст з'являється при наведенні */
+  opacity: 1;
 }
