@@ -1,9 +1,14 @@
 import styles from './page.module.scss';
-import Image from 'next/image';
 import { AnimatedBlob } from '@/components';
+import Link from 'next/link';
 import author from '../../../../assets/about_author.png';
+import first from '../../../../assets/first.jpg';
+import facts from '../../../../assets/facts.png';
 
 const AboutPage = () => {
+  const chess = 'https://www.chess.com/member/walgul';
+  const leetcode = 'https://leetcode.com/Eugenist/';
+
   return (
     <section className={styles.about}>
       <article className={styles.about__summary}>
@@ -28,29 +33,71 @@ const AboutPage = () => {
           height={600}
           index={50}
           title=""
-          backgroundImage="/_next/static/media/about_author.32365f4b.png"
+          background={author}
         />
       </article>
       <article className={styles.about__summary}>
-        <AnimatedBlob id={'2'} width={600} height={600} index={25} title="" />
+        <AnimatedBlob
+          id={'2'}
+          width={600}
+          height={600}
+          index={25}
+          title=""
+          background={first}
+        />
         <div className={styles.about__text}>
           <h2 className={styles.about__title}>My road</h2>
-          <p>hehehe!</p>
+          <p>
+            If I think about my first steps into web development, it would have
+            been my last year at school. I was have a subject – computer
+            science. Usually, the teacher told us about Word, Excel, Power Point
+            and stuff like that. One day, we had a class on Microsoft Publisher
+            and each of the students created their own website. I had built a
+            movie portal and I like it. (look the picture in the bubble) And
+            after a lot of years, when I finished university and worked in
+            public catering I remembered this. I decided to switch my career
+            path and started to learn about web development by myself. However,
+            I quickly realized that I needed a study structure and mentorship.
+            So I finished courses where I learned HTML, CSS, JavaScript and
+            React. Now I continue my self-education and actively searching for
+            my first job as a Frontend developer!
+          </p>
         </div>
       </article>
       <article className={styles.about__summary}>
         <div className={styles.about__text}>
           <h2 className={styles.about__title}>Random facts</h2>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <ol className={styles.about__list}>
+            <li
+              className={styles.about__list_item}
+            >{`I am a barista in the past, so about coffee that's for me!`}</li>
+            <li>I like books, especially paper books. How they smell!</li>
+            <li>
+              Chess lover! Wanna{' '}
+              <Link className={styles.colored} target="_blank" href={chess}>
+                PLAY
+              </Link>{' '}
+              with me?
+            </li>
+            <li>Huge fan of space and technology progress.</li>
+            <li>
+              Sometimes I solve problems on{' '}
+              <Link className={styles.colored} target="_blank" href={chess}>
+                Leetcode
+              </Link>{' '}
+              , have 303 days streak.
+            </li>
+            <li>I cook well.</li>
+          </ol>
         </div>
-        <AnimatedBlob id={'3'} width={600} height={600} index={58} title="" />
+        <AnimatedBlob
+          id={'3'}
+          width={600}
+          height={600}
+          index={58}
+          title=""
+          background={facts}
+        />
       </article>
     </section>
   );

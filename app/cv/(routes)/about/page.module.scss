@@ -14,16 +14,21 @@
     align-items: center;
     padding: 25px;
     margin: 0 auto;
-    gap: 15px;
+    gap: 4rem;
   }
 
   &__title {
     font-size: 1.5rem;
     padding-bottom: 25px;
+    color: #d4b44f;
   }
 
   &__text {
     max-width: 25rem;
     font-size: 0.9rem;
   }
+}
+
+.colored {
+  color: #f4e6c2;
 }

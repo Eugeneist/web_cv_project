@@ -7,18 +7,85 @@ import website from '../../../assets/website.png';
 export interface ProjectProps {
   id: number;
   title: string;
+  subtitle: string;
   description: string;
   technologies: string[];
   links: string[];
+  isFull?: boolean;
+  picture: any;
 }
 
 const Project: React.FC<ProjectProps> = ({
   id,
   title,
+  subtitle,
   description,
   technologies,
   links,
+  isFull = false,
+  picture,
 }) => {
+  if (isFull) {
+    return (
+      <article className={styles.project_max}>
+        <div className={styles.project_max__content}>
+          <h3 className={styles.project_max__title}>
+            {id + 1}. {title}
+          </h3>
+          <div className={styles.project_max__subtitle}>
+            <p>{subtitle}</p>
+          </div>
+          <div className={styles.project_max__description}>
+            <p>{description}</p>
+          </div>
+          <ul className={styles.project_max__techlist}>
+            {technologies.map((tech) => (
+              <li key={technologies.indexOf(tech)}>
+                <p>{tech}</p>
+              </li>
+            ))}
+          </ul>
+          <div className={styles.project_min__linkbox}>
+            <div className={styles.project_max__link}>
+              <Link
+                className={styles.project_max__icon}
+                target="_blank"
+                href={links[0]}
+              >
+                <Image src={github} width={30} height={30} alt="github link" />
+              </Link>
+            </div>
+            <div className={styles.project_max__link}>
+              <Link
+                className={styles.project_max__icon}
+                target="_blank"
+                href={links[1]}
+              >
+                <Image
+                  src={website}
+                  width={32}
+                  height={32}
+                  alt="website link"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className={styles.project_max__imagebox}>
+          <Link target="_blank" href={links[1]}>
+            <Image
+              className={styles.project_max__image}
+              src={picture}
+              width={633}
+              height={315}
+              alt="project pic"
+            />
+          </Link>
+        </div>
+      </article>
+    );
+  }
+
   return (
     <article className={styles.project_min}>
       <div>
@@ -41,7 +108,7 @@ const Project: React.FC<ProjectProps> = ({
         <div className={styles.project_min__link}>
           <p>Code:</p>
           <Link
-            className={styles.project_min__image}
+            className={styles.project_min__icon}
             target="_blank"
             href={links[0]}
           >
@@ -51,7 +118,7 @@ const Project: React.FC<ProjectProps> = ({
         <div className={styles.project_min__link}>
           <p>Deploy:</p>
           <Link
-            className={styles.project_min__image}
+            className={styles.project_min__icon}
             target="_blank"
             href={links[1]}
           >

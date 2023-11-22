@@ -1,13 +1,10 @@
 .header {
-  // background-color: #4f709c;
-  // dark mode:
   background-color: rgba($color: #000000, $alpha: 0.7);
   width: 100%;
   height: 35vh;
   display: flex;
   align-items: end;
   justify-content: center;
-  // border-bottom: 1px solid gray;
 
   &__inner {
     max-width: 1440px;

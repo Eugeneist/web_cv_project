@@ -2,8 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import styles from './AnimatedBlob.module.scss';
-import { url } from 'inspector';
-// import autor from '../../assets/about_author.png'
 
 interface AnimatedBlobProps {
   id: string;
@@ -11,7 +9,7 @@ interface AnimatedBlobProps {
   width: number;
   height: number;
   index: number;
-  backgroundImage?: string;
+  background?: any;
 }
 
 const AnimatedBlob: React.FC<AnimatedBlobProps> = ({
@@ -20,7 +18,7 @@ const AnimatedBlob: React.FC<AnimatedBlobProps> = ({
   height,
   id,
   index,
-  backgroundImage,
+  background,
 }) => {
   const containerId = useRef(`animatedBlobContainer_${id}`);
   const canvasId = useRef(`animatedBlobCanvas_${id}`);
@@ -36,8 +34,7 @@ const AnimatedBlob: React.FC<AnimatedBlobProps> = ({
       return;
     }
 
-    // Збільшити розмір Canvas та його роздільну здатність
-    const scale = 1; // Змініть за потребою
+    const scale = 1;
     const containerSize = Math.min(width, height);
     canvas.width = containerSize * scale;
     canvas.height = containerSize * scale;
@@ -82,11 +79,9 @@ const AnimatedBlob: React.FC<AnimatedBlobProps> = ({
 
       time += 0.008;
 
-      // Викликати requestAnimationFrame для продовження анімації
       requestAnimationFrame(drawBlob);
     };
 
-    // Початок анімації
     drawBlob();
   }, [width, height, containerId, canvasId, id, index]);
 
@@ -98,7 +93,9 @@ const AnimatedBlob: React.FC<AnimatedBlobProps> = ({
     >
       <canvas id={id} className={styles.blobCanvas} />
       <div
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{
+          backgroundImage: `url(${background.src})`,
+        }}
         className={styles.imageContainer}
       >
         {title}

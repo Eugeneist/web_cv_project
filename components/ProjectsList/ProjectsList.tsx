@@ -4,22 +4,43 @@ import styles from './ProjectsList.module.scss';
 
 interface ProjectsListProps {
   projects: ProjectProps[];
+  isFull: boolean;
 }
 
-const ProjectsList: React.FC<ProjectsListProps> = ({ projects }) => {
+const ProjectsList: React.FC<ProjectsListProps> = ({
+  projects,
+  isFull = false,
+}) => {
   return (
     <ul className={styles.projectslist}>
-      {projects.map((project) => (
-        <li className={styles.projectslist__item} key={project.id}>
-          <Project
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            links={project.links}
-          />
-        </li>
-      ))}
+      {projects.map(
+        ({
+          id,
+          title,
+          subtitle,
+          description,
+          technologies,
+          links,
+          picture,
+        }) => (
+          <li
+            style={{ paddingBottom: `${isFull ? '10rem' : '0.625rem'}` }}
+            className={styles.projectslist__item}
+            key={id}
+          >
+            <Project
+              id={id}
+              title={title}
+              subtitle={subtitle}
+              description={description}
+              technologies={technologies}
+              links={links}
+              picture={picture}
+              isFull={isFull}
+            />
+          </li>
+        ),
+      )}
     </ul>
   );
 };
