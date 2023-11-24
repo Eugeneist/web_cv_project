@@ -22,6 +22,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({
           technologies,
           links,
           picture,
+          variant = true,
         }) => (
           <li
             style={{ paddingBottom: `${isFull ? '10rem' : '0.625rem'}` }}
@@ -37,6 +38,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({
               links={links}
               picture={picture}
               isFull={isFull}
+              variant={id % 2 === 0}
             />
           </li>
         ),

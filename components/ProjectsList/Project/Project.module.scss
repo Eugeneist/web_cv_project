@@ -121,13 +121,20 @@
     flex-direction: column;
     gap: 0.9rem;
     position: relative;
-    grid-area: 1 / 1 / -1 / 7;
     padding: 2rem;
+  }
+
+  &__left {
+    grid-area: 1 / 1 / -1 / 7;
+  }
+
+  &__right {
+    grid-area: 1 / 6 / -1 / -1;
+    align-items: flex-end;
   }
 
   &__imagebox {
     box-shadow: 0 10px 30px -15px var(rgba(2, 12, 27, 0.7));
-    grid-area: 1 / 6 / -1 / -1;
     position: relative;
     z-index: 1;
     transition: all 0.6s ease;

@@ -1,0 +1,35 @@
+.groups {
+  &__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 auto;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-bottom: 6rem;
+  }
+
+  &__title {
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    color: #d4b44f;
+  }
+}
+
+.skills {
+  &__list {
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem;
+    grid-gap: 1.875rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

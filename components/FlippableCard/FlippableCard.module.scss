@@ -1,0 +1,111 @@
+.flippable_card__container {
+  width: 15rem;
+  height: 15rem;
+  margin: 0;
+  padding: 0;
+  top: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+
+  &.flipped {
+    .flippable_card__front {
+      transform: rotateY(180deg);
+    }
+    .flippable_card__back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .flippable_card__front,
+  .flippable_card__back {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: rgba(51, 51, 49, 0.8);
+    border-radius: 25px;
+    padding: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: -webkit-transform ease 500ms, transform ease 500ms;
+  }
+
+  .flippable_card__front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    padding: 15px;
+
+    &_imagebox {
+      border-radius: 10px;
+      background-color: transparent;
+      height: 100%;
+    }
+  }
+
+  .flippable_card__back {
+    transform: rotateY(-180deg);
+    padding: 15px;
+    font-size: 16px;
+    background-color: #d4b44f;
+
+    &_title {
+      font-size: 20px;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .flippable_card__image-container {
+    position: relative;
+
+    .flippable_card__image {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .flippable_card__title {
+      font-size: 34px;
+      position: absolute;
+      //   margin-bottom: $text-margin;
+      //   margin-left: $text-margin;
+      bottom: 0;
+      left: 0;
+      //   color: $new-white;
+    }
+  }
+
+  .flippable_card__main-area {
+    // margin-left: $text-margin;
+    // margin-top: $text-margin;
+    // margin-right: $text-margin;
+
+    .flippable_card__blog-post {
+      height: 100%;
+
+      .flippable_card__date {
+        // margin-top: $text-margin;
+        margin-bottom: 5px;
+        font-size: 20px;
+      }
+
+      .flippable_card__read-more {
+        font-size: 20px;
+        position: relative;
+        bottom: 0px;
+        text-align: right;
+      }
+
+      .flippable_card__blog-content {
+        height: 90%;
+        display: block;
+        // margin-top: $text-margin;
+        // margin-bottom: $text-margin;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

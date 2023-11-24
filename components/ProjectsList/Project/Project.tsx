@@ -13,6 +13,7 @@ export interface ProjectProps {
   links: string[];
   isFull?: boolean;
   picture: any;
+  variant?: boolean;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -24,11 +25,16 @@ const Project: React.FC<ProjectProps> = ({
   links,
   isFull = false,
   picture,
+  variant,
 }) => {
   if (isFull) {
     return (
       <article className={styles.project_max}>
-        <div className={styles.project_max__content}>
+        <div
+          className={`${styles.project_max__content} ${
+            variant ? styles.project_max__left : styles.project_max__right
+          }`}
+        >
           <h3 className={styles.project_max__title}>
             {id + 1}. {title}
           </h3>
@@ -71,7 +77,11 @@ const Project: React.FC<ProjectProps> = ({
             </div>
           </div>
         </div>
-        <div className={styles.project_max__imagebox}>
+        <div
+          className={`${styles.project_max__imagebox} ${
+            variant ? styles.project_max__right : styles.project_max__left
+          }`}
+        >
           <Link target="_blank" href={links[1]}>
             <Image
               className={styles.project_max__image}
