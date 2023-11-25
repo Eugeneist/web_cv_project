@@ -1,9 +1,7 @@
 import styles from './page.module.scss';
+import { about_author, first_website, facts } from '@/assets/images';
 import { AnimatedBlob } from '@/components';
 import Link from 'next/link';
-import author from '../../../../assets/about_author.png';
-import first from '../../../../assets/first.jpg';
-import facts from '../../../../assets/facts.png';
 
 const AboutPage = () => {
   const chess = 'https://www.chess.com/member/walgul';
@@ -33,7 +31,7 @@ const AboutPage = () => {
           height={600}
           index={50}
           title=""
-          background={author}
+          background={about_author}
         />
       </article>
       <article className={styles.about__summary}>
@@ -43,7 +41,7 @@ const AboutPage = () => {
           height={600}
           index={25}
           title=""
-          background={first}
+          background={first_website}
         />
         <div className={styles.about__text}>
           <h2 className={styles.about__title}>My road</h2>

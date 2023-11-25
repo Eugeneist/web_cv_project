@@ -7,12 +7,12 @@ import website from '../../../assets/website.png';
 export interface ProjectProps {
   id: number;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: string;
   technologies: string[];
   links: string[];
   isFull?: boolean;
-  picture: any;
+  picture?: any;
   variant?: boolean;
 }
 

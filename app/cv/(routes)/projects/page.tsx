@@ -1,8 +1,6 @@
+import { dizhka, cv_website, fresh_news } from '@/assets/images';
 import styles from './page.module.scss';
 import { ProjectsList } from '@/components';
-import project_0 from '../../../../assets/project_0.png';
-import project_1 from '../../../../assets/project_1.jpg';
-import project_2 from '../../../../assets/project_2.png';
 
 const projects = [
   {
@@ -26,7 +24,7 @@ const projects = [
       'https://github.com/Eugeneist/Dizhka-Store',
       'https://eugeneist.github.io/Dizhka-Store/',
     ],
-    picture: `${project_1.src}`,
+    picture: dizhka,
   },
   {
     id: 1,
@@ -39,7 +37,7 @@ const projects = [
       'https://github.com/Eugeneist/web_cv_project',
       'https://github.com/Eugeneist/web_cv_project',
     ],
-    picture: `${project_0.src}`,
+    picture: cv_website,
   },
   {
     id: 2,
@@ -60,7 +58,7 @@ const projects = [
       'https://github.com/Eugeneist/fresh-news',
       'https://eugeneist.github.io/fresh-news/',
     ],
-    picture: `${project_2.src}`,
+    picture: fresh_news,
   },
 ];
 

@@ -43,6 +43,11 @@
       background-color: transparent;
       height: 100%;
     }
+
+    &_image {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .flippable_card__back {
@@ -68,44 +73,8 @@
     .flippable_card__title {
       font-size: 34px;
       position: absolute;
-      //   margin-bottom: $text-margin;
-      //   margin-left: $text-margin;
       bottom: 0;
       left: 0;
-      //   color: $new-white;
-    }
-  }
-
-  .flippable_card__main-area {
-    // margin-left: $text-margin;
-    // margin-top: $text-margin;
-    // margin-right: $text-margin;
-
-    .flippable_card__blog-post {
-      height: 100%;
-
-      .flippable_card__date {
-        // margin-top: $text-margin;
-        margin-bottom: 5px;
-        font-size: 20px;
-      }
-
-      .flippable_card__read-more {
-        font-size: 20px;
-        position: relative;
-        bottom: 0px;
-        text-align: right;
-      }
-
-      .flippable_card__blog-content {
-        height: 90%;
-        display: block;
-        // margin-top: $text-margin;
-        // margin-bottom: $text-margin;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
     }
   }
 }

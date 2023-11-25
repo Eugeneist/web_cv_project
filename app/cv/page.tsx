@@ -162,7 +162,7 @@ const CV = () => {
               <Button label="Projects" />
             </Link>
           </h2>
-          <ProjectsList projects={projects} />
+          <ProjectsList projects={projects} isFull={false} />
         </section>
         <section>
           <article className={styles.info__skills}>

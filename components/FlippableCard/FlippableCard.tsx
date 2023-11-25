@@ -35,7 +35,13 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
     >
       <div className={styles.flippable_card__front}>
         <div className={styles.flippable_card__front_imagebox}>
-          {/* <Image src={image} width={32} height={32} alt="technology logo" /> */}
+          <Image
+            className={styles.flippable_card__front_image}
+            src={image}
+            width={32}
+            height={32}
+            alt="technology logo"
+          />
         </div>
       </div>
       <div className={styles.flippable_card__back}>
