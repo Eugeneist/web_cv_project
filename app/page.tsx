@@ -32,7 +32,7 @@ export default function Home() {
                 <h2>a Frontend Developer</h2>
               </div>
               <Link className={styles.home__button} href="/cv">
-                <Button label="Watch CV!" />
+                <Button label="Watch CV" />
               </Link>
             </div>
             <div>

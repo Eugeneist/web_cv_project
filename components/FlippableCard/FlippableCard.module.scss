@@ -53,12 +53,13 @@
   .flippable_card__back {
     transform: rotateY(-180deg);
     padding: 15px;
-    font-size: 16px;
+    font-size: 1.125rem;
     background-color: #d4b44f;
+    color: #000;
 
     &_title {
-      font-size: 20px;
-      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+      padding-bottom: 0.8rem;
     }
   }
 
@@ -68,13 +69,6 @@
     .flippable_card__image {
       width: 100%;
       border-radius: 10px;
-    }
-
-    .flippable_card__title {
-      font-size: 34px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
     }
   }
 }

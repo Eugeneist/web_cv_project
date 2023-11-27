@@ -44,7 +44,7 @@
       font-size: 3rem;
     }
 
-    padding-bottom: 10px;
+    padding-bottom: 40px;
   }
 
   &__text {
@@ -58,6 +58,8 @@
       background-color: #d4b44f;
       color: #000;
       animation: pulse 2s infinite;
+      // text-transform: capitalize;
+      text-align: center;
     }
   }
 }
