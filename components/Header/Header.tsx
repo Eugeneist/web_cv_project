@@ -2,7 +2,7 @@ import styles from './Header.module.scss';
 import Image from 'next/image';
 import author from '../../assets/author.png';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.header__inner}>

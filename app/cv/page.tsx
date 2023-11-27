@@ -4,7 +4,7 @@ import { Button } from '@/components';
 import { Certificate } from '@/components';
 import { ProjectsList } from '@/components';
 import styles from './page.module.scss';
-import cv from '../../assets/cv.svg';
+import { cv } from '@/assets/images';
 
 const cerificates = [
   {

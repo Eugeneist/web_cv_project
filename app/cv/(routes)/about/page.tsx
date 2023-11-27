@@ -86,6 +86,7 @@ const AboutPage = () => {
               , have 303 days streak.
             </li>
             <li>I cook well.</li>
+            <li>Birthday: 18 June 1995</li>
           </ol>
         </div>
         <AnimatedBlob

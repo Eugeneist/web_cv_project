@@ -1,5 +1,5 @@
-import { Header } from '@/components';
 import { Navbar } from '@/components';
+import { Footer } from '@/components';
 
 export default function RoutesLayout({
   children,
@@ -20,6 +20,7 @@ export default function RoutesLayout({
     <>
       <Navbar menuItems={menuItems} />
       {children}
+      <Footer />
     </>
   );
 }

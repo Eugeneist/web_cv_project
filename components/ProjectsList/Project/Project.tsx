@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Project.module.scss';
-import github from '../../../assets/github.svg';
-import website from '../../../assets/website.png';
+import { link, github_social } from '@/assets/images';
 
 export interface ProjectProps {
   id: number;
@@ -58,7 +57,12 @@ const Project: React.FC<ProjectProps> = ({
                 target="_blank"
                 href={links[0]}
               >
-                <Image src={github} width={30} height={30} alt="github link" />
+                <Image
+                  src={github_social}
+                  width={30}
+                  height={30}
+                  alt="github link"
+                />
               </Link>
             </div>
             <div className={styles.project_max__link}>
@@ -67,12 +71,7 @@ const Project: React.FC<ProjectProps> = ({
                 target="_blank"
                 href={links[1]}
               >
-                <Image
-                  src={website}
-                  width={32}
-                  height={32}
-                  alt="website link"
-                />
+                <Image src={link} width={32} height={32} alt="website link" />
               </Link>
             </div>
           </div>
@@ -122,7 +121,12 @@ const Project: React.FC<ProjectProps> = ({
             target="_blank"
             href={links[0]}
           >
-            <Image src={github} width={30} height={30} alt="github link" />
+            <Image
+              src={github_social}
+              width={30}
+              height={30}
+              alt="github link"
+            />
           </Link>
         </div>
         <div className={styles.project_min__link}>
@@ -132,7 +136,7 @@ const Project: React.FC<ProjectProps> = ({
             target="_blank"
             href={links[1]}
           >
-            <Image src={website} width={32} height={32} alt="website link" />
+            <Image src={link} width={32} height={32} alt="website link" />
           </Link>
         </div>
       </div>

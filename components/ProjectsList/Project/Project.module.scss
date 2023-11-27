@@ -22,7 +22,7 @@
 @mixin icon {
   transition: all 0.6s ease;
   &:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
     transition: all 0.6s ease;
   }
 }
@@ -61,6 +61,8 @@
 
   &__linkbox {
     display: flex;
+    align-items: center;
+    justify-content: baseline;
     gap: 15px;
   }
 

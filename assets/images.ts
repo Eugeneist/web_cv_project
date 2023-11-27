@@ -32,3 +32,15 @@ export { default as fresh_news } from '@/assets/projects/project_2.png';
 export { default as about_author } from '@/assets/about/author.png';
 export { default as facts } from '@/assets/about/facts.png';
 export { default as first_website } from '@/assets/about/first_website.jpg';
+
+//SOCIALS
+
+export { default as github_social } from '@/assets/socials/github.svg';
+export { default as instagram_social } from '@/assets/socials/instagram.svg';
+export { default as linkedin_social } from '@/assets/socials/linkedin.svg';
+export { default as telegram_social } from '@/assets/socials/telegram.svg';
+
+//CV
+
+export { default as link } from '@/assets/link.svg';
+export { default as cv } from '@/assets/cv.svg';

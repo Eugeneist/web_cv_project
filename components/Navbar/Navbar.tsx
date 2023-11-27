@@ -25,10 +25,10 @@ const Navbar: React.FC<NavigationProps> = ({ menuItems }) => {
   return (
     <nav className={styles.navigation}>
       <ul className={styles.desktopmenu}>
-        {menuItems.map((item) => (
-          <li key={item.id}>
-            <Link href={item.url}>
-              <Button label={item.label} />
+        {menuItems.map(({ id, url, label }) => (
+          <li key={id}>
+            <Link href={url}>
+              <Button label={label} />
             </Link>
           </li>
         ))}

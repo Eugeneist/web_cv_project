@@ -7,3 +7,4 @@ export { Transition } from './Transition';
 export { AnimatedBlob } from './AnimatedBlob';
 export { FlippableCard } from './FlippableCard';
 export { SkillList } from './SkillList';
+export { Footer } from './Footer';
