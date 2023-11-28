@@ -1,0 +1,12 @@
+.timeline_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.3rem;
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

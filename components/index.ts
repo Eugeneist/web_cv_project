@@ -8,3 +8,4 @@ export { AnimatedBlob } from './AnimatedBlob';
 export { FlippableCard } from './FlippableCard';
 export { SkillList } from './SkillList';
 export { Footer } from './Footer';
+export { Timeline } from './Timeline';

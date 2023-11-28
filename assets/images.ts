@@ -44,3 +44,9 @@ export { default as telegram_social } from '@/assets/socials/telegram.svg';
 
 export { default as link } from '@/assets/link.svg';
 export { default as cv } from '@/assets/cv.svg';
+
+//EDUCATION
+
+export { default as hillel } from '@/assets/education/hillel.jpg';
+export { default as khpi } from '@/assets/education/ntukhpi.jpg';
+export { default as donnuet } from '@/assets/education/donnuet.png';

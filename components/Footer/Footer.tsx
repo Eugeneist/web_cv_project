@@ -39,6 +39,8 @@ const socials = [
   },
 ];
 
+let currentYear = new Date().getFullYear();
+
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
@@ -65,8 +67,8 @@ const Footer: React.FC = () => {
           </ul>
         </nav>
         <div className={styles.footer__copyright}>
-          <p>Designed & developed by Yevhen Rudofylov,</p>
-          {new Date().getFullYear()}
+          <p>Designed & developed by Yevhen Rudofylov</p>
+          <p>{currentYear > 2023 ? `2023 - ${currentYear}` : currentYear}</p>
         </div>
       </section>
     </footer>
