@@ -101,7 +101,7 @@ const Project: React.FC<ProjectProps> = ({
         <h3 className={styles.project_min__title}>
           {id + 1}. {title}
         </h3>
-        <p>{description}</p>
+        <p>{subtitle}</p>
       </div>
       <div className={styles.project_min__techbox}>
         <h4 className={styles.project_min__title_tech}>Technoligies:</h4>

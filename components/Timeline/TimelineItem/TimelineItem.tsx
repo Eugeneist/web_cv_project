@@ -25,14 +25,14 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
       </div>
       <div className={styles.timeline_item__textbox}>
         <div>
-          <h2>{title}</h2>
-          <p>{text}</p>
+          <h2 className={styles.timeline_item__title}>{title}</h2>
+          <p className={styles.timeline_item__text}>{text}</p>
           <p>
             {date.start} {date.end && <span>- {date.end}</span>}
           </p>
         </div>
         {link && (
-          <div>
+          <div className={styles.timeline_item__link}>
             <Link target="_blank" href={link.url}>
               {link.name}
             </Link>

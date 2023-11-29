@@ -20,7 +20,7 @@ export default function Home() {
       <header>
         <Navbar menuItems={menuItems} />
       </header>
-      <main className={styles.main}>
+      <main className={styles.mainpage}>
         <section className={styles.home}>
           <div className={styles.home__inner}>
             <div>

@@ -2,30 +2,49 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0.625rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
 
   &__summary {
     display: flex;
     align-items: center;
-    padding: 25px;
+    padding: 1.563rem;
     margin: 0 auto;
     gap: 4rem;
+
+    &:nth-child(even) {
+      padding-right: 8rem;
+    }
+
+    &:nth-child(odd) {
+      padding-left: 8rem;
+    }
   }
 
   &__title {
     font-size: 1.5rem;
-    padding-bottom: 25px;
+    padding-bottom: 1.563rem;
     color: #d4b44f;
   }
 
+  &__textbox {
+    padding: 50px;
+    background-color: rgba(51, 51, 49, 0.8);
+    border-radius: 1.563rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transition: all 0.5s ease;
+      background-color: rgba(51, 51, 49, 1);
+    }
+  }
+
   &__text {
-    max-width: 25rem;
-    font-size: 0.9rem;
+    max-width: 35rem;
   }
 }
 

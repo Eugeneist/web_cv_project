@@ -1,10 +1,10 @@
 .footer {
-  padding: 25px;
+  padding: 1.563rem;
   background-color: #000;
   color: #f4e6c2;
 
   &__inner {
-    padding: 10px;
+    padding: 0.625rem;
     margin: 0 auto;
     display: flex;
     gap: 1rem;
@@ -18,11 +18,11 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
   }
 
   &__navitem {
-    padding: 0 3px;
+    padding: 0 0.188rem;
     transition: all 0.5s ease;
 
     &:hover {
@@ -36,6 +36,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 0.125rem;
   }
 }

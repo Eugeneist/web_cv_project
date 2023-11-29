@@ -1,18 +1,16 @@
 import styles from './page.module.scss';
 import { about_author, first_website, facts } from '@/assets/images';
+import { leetcode, chess } from '@/data/data';
 import { AnimatedBlob } from '@/components';
 import Link from 'next/link';
 
 const AboutPage = () => {
-  const chess = 'https://www.chess.com/member/walgul';
-  const leetcode = 'https://leetcode.com/Eugenist/';
-
   return (
     <section className={styles.about}>
       <article className={styles.about__summary}>
-        <div className={styles.about__text}>
+        <div className={styles.about__textbox}>
           <h2 className={styles.about__title}>Summary</h2>
-          <p>
+          <p className={styles.about__text}>
             Hey, traveler!
             <br />
             Glad to see you at my CV website! I hope you like it.
@@ -43,9 +41,9 @@ const AboutPage = () => {
           title=""
           background={first_website}
         />
-        <div className={styles.about__text}>
+        <div className={styles.about__textbox}>
           <h2 className={styles.about__title}>My road</h2>
-          <p>
+          <p className={styles.about__text}>
             If I think about my first steps into web development, it would have
             been my last year at school. I was have a subject – computer
             science. Usually, the teacher told us about Word, Excel, Power Point
@@ -63,7 +61,7 @@ const AboutPage = () => {
         </div>
       </article>
       <article className={styles.about__summary}>
-        <div className={styles.about__text}>
+        <div className={styles.about__textbox}>
           <h2 className={styles.about__title}>Random facts</h2>
           <ol className={styles.about__list}>
             <li
@@ -80,7 +78,7 @@ const AboutPage = () => {
             <li>Huge fan of space and technology progress.</li>
             <li>
               Sometimes I solve problems on{' '}
-              <Link className={styles.colored} target="_blank" href={chess}>
+              <Link className={styles.colored} target="_blank" href={leetcode}>
                 Leetcode
               </Link>{' '}
               , have 303 days streak.

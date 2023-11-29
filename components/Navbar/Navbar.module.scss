@@ -19,7 +19,7 @@
 }
 
 .desktopmenu li {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .desktopmenu a {
@@ -50,7 +50,7 @@
 
 @media (max-width: 768px) {
   .desktopmenu {
-    display: none;
+    // display: none;
   }
 
   .mobilemenu {

@@ -3,7 +3,7 @@
   height: 15rem;
   margin: 0;
   padding: 0;
-  top: 20px;
+  top: 1.25rem;
   position: relative;
   transform-style: preserve-3d;
   box-sizing: border-box;
@@ -24,8 +24,8 @@
     width: 100%;
     display: block;
     background-color: rgba(51, 51, 49, 0.8);
-    border-radius: 25px;
-    padding: 10px;
+    border-radius: 1.563rem;
+    padding: 0.625rem;
     position: absolute;
     backface-visibility: hidden;
     cursor: pointer;
@@ -36,10 +36,10 @@
   .flippable_card__front {
     z-index: 2;
     transform: rotateY(0deg);
-    padding: 15px;
+    padding: 0.938rem;
 
     &_imagebox {
-      border-radius: 10px;
+      border-radius: 0.625rem;
       background-color: transparent;
       height: 100%;
     }
@@ -52,7 +52,7 @@
 
   .flippable_card__back {
     transform: rotateY(-180deg);
-    padding: 15px;
+    padding: 0.938rem;
     font-size: 1.125rem;
     background-color: #d4b44f;
     color: #000;
@@ -68,7 +68,7 @@
 
     .flippable_card__image {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 0.625rem;
     }
   }
 }

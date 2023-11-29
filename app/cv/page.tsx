@@ -3,74 +3,9 @@ import Image from 'next/image';
 import { Button } from '@/components';
 import { Certificate } from '@/components';
 import { ProjectsList } from '@/components';
+import { cerificates, projects } from '@/data/data';
 import styles from './page.module.scss';
 import { cv } from '@/assets/images';
-
-const cerificates = [
-  {
-    id: 0,
-    title: 'Hillel IT School',
-    description: 'Frontend Basic (HTML, CSS/SCSS)',
-    link: 'https://certificate.ithillel.ua/view/44227142',
-  },
-  {
-    id: 1,
-    title: 'Hillel IT School',
-    description: 'Frontend Pro (JavaScript, React)',
-    link: 'https://certificate.ithillel.ua/ru/view/12754162',
-  },
-];
-
-const projects = [
-  {
-    id: 0,
-    title: 'CV Website',
-    description: 'My CV website',
-    technologies: ['React', 'Next.js', 'TypeScript', 'SCSS modules'],
-    links: [
-      'https://github.com/Eugeneist/web_cv_project',
-      'https://github.com/Eugeneist/web_cv_project',
-    ],
-  },
-  {
-    id: 1,
-    title: 'Dizhka Store',
-    description: 'eCommerce Application',
-    technologies: [
-      'React',
-      'Redux',
-      'Chakra UI',
-      'AXIOS',
-      'Redux Persist',
-      'React Hook Form',
-      'Styled Components',
-      'NodeJS',
-      'Express',
-    ],
-    links: [
-      'https://github.com/Eugeneist/Dizhka-Store',
-      'https://eugeneist.github.io/Dizhka-Store/',
-    ],
-  },
-  {
-    id: 2,
-    title: 'Fresh News App',
-    description: 'Small news application',
-    technologies: [
-      'React',
-      'TypeScript',
-      'Redux',
-      'Material UI',
-      'SCSS modules',
-      'AXIOS',
-      'React Router',
-    ],
-    links: [
-      'https://github.com/Eugeneist/fresh-news',
-      'https://eugeneist.github.io/fresh-news/',
-    ],
-  },
-];
 
 const CV = () => {
   return (

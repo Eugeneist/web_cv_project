@@ -1,43 +1,7 @@
 import styles from './Footer.module.scss';
-import {
-  github_social,
-  instagram_social,
-  linkedin_social,
-  telegram_social,
-} from '@/assets/images';
+import { socials } from '@/data/data';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const socials = [
-  {
-    id: 0,
-    title: 'github',
-    link: 'https://github.com/Eugeneist',
-    image: github_social,
-    description: 'github link',
-  },
-  {
-    id: 1,
-    title: 'instagram',
-    link: 'https://www.instagram.com/eugene_lufever/',
-    image: instagram_social,
-    description: 'instagram link',
-  },
-  {
-    id: 2,
-    title: 'linkedin',
-    link: 'https://www.linkedin.com/in/yevhen-rudofylov-ba8010166/',
-    image: linkedin_social,
-    description: 'linkedin link',
-  },
-  {
-    id: 3,
-    title: 'telegram',
-    link: 'tg://resolve?domain=rudofylov',
-    image: telegram_social,
-    description: 'telegram link',
-  },
-];
 
 let currentYear = new Date().getFullYear();
 

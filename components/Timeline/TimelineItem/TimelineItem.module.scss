@@ -1,12 +1,43 @@
 .timeline_item {
+  width: 30rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1.3rem;
+  padding: 1.875rem;
+  background-color: rgba(51, 51, 49, 0.8);
+  border-radius: 1.563rem;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transition: all 0.5s ease;
+    background-color: rgba(51, 51, 49, 1);
+  }
 
   &__textbox {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: #d4b44f;
+    width: 100%;
+    padding-bottom: 0.4rem;
+  }
+
+  &__text {
+    padding-bottom: 0.4rem;
+  }
+
+  &__link {
+    color: #f4e6c2;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: #d4b44f;
+      transition: all 0.5s ease;
+    }
   }
 }
