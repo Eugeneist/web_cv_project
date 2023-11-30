@@ -1,20 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Navbar } from '@/components';
-import { Button } from '@/components';
+import { Navbar, Button } from '@/components';
+import { menuItems } from '@/data/data';
 import styles from './page.module.scss';
 import author from '../assets/hero_author.png';
 
 export default function Home() {
-  const menuItems = [
-    { id: 0, label: 'Home', url: '/' },
-    { id: 1, label: 'About', url: '/cv/about' },
-    { id: 2, label: 'Skills', url: '/cv/skills' },
-    { id: 3, label: 'Education', url: '/cv/education' },
-    { id: 4, label: 'Projects', url: '/cv/projects' },
-    { id: 5, label: 'Contacts', url: '/cv/contacts' },
-  ];
-
   return (
     <>
       <header>

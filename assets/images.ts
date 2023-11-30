@@ -50,3 +50,8 @@ export { default as cv } from '@/assets/cv.svg';
 export { default as hillel } from '@/assets/education/hillel.jpg';
 export { default as khpi } from '@/assets/education/ntukhpi.jpg';
 export { default as donnuet } from '@/assets/education/donnuet.png';
+
+// MENU
+
+export { default as burger_open } from '@/assets/burger_open.svg';
+export { default as burger_close } from '@/assets/burger_close.svg';
