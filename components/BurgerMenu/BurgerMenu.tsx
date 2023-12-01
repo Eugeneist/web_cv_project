@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { NavigationProps } from '../Navbar/Navbar';
-import { useStopScrolling, useScrollPoint } from '@/hooks';
+import { useScrollPoint } from '@/hooks';
 import { Button } from '@/components';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,21 +13,15 @@ const BurgerMenu: React.FC<NavigationProps> = ({ menuItems }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isScrolled = useScrollPoint({ point: 30 });
-  const { bodyRef } = useStopScrolling({ trigger: isMobileMenuOpen });
 
   const toggleMobileMenu = useCallback(() => {
     setMobileMenuOpen((prevState) => !prevState);
-  }, []);
-
-  const handleCloseMenu = useCallback(() => {
-    const body = bodyRef.current;
-    setTimeout(() => {
-      toggleMobileMenu();
-      if (body) {
-        body.style.overflow = 'visible';
-      }
-    }, 300);
-  }, [bodyRef, toggleMobileMenu]);
+    if (typeof window != 'undefined' && window.document) {
+      document.documentElement.style.overflow = isMobileMenuOpen
+        ? 'auto'
+        : 'hidden';
+    }
+  }, [isMobileMenuOpen]);
 
   return (
     <nav>
@@ -66,7 +60,7 @@ const BurgerMenu: React.FC<NavigationProps> = ({ menuItems }) => {
           <ul className={styles.mobilemenu__list}>
             {menuItems.map(({ id, url, label }) => (
               <li className={styles.mobilemenu__buttonbox} key={id}>
-                <Link onClick={handleCloseMenu} href={url}>
+                <Link onClick={toggleMobileMenu} href={url}>
                   <Button
                     style={{
                       width: '22rem',
