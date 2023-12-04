@@ -14,7 +14,7 @@ export default function Home() {
       <main className={styles.mainpage}>
         <section className={styles.home}>
           <div className={styles.home__inner}>
-            <div>
+            <div className={styles.home__action}>
               <div className={styles.home__textbox}>
                 <p>Hello!</p>
                 <p className={styles.home__text}>My name is</p>
@@ -26,8 +26,9 @@ export default function Home() {
                 <Button label="Watch CV" />
               </Link>
             </div>
-            <div>
+            <div className={styles.home__image_container}>
               <Image
+                className={styles.home__image}
                 src={author}
                 quality={100}
                 height={463}

@@ -18,3 +18,11 @@
     }
   }
 }
+
+@media all and (max-width: 1000px) {
+  .certificate {
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
+}

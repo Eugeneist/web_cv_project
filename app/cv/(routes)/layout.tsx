@@ -1,4 +1,4 @@
-import { Navbar, BurgerMenu } from '@/components';
+import { Navbar } from '@/components';
 import { menuItems } from '@/data/data';
 
 export default function RoutesLayout({
@@ -9,7 +9,6 @@ export default function RoutesLayout({
   return (
     <>
       <Navbar menuItems={menuItems} />
-      <BurgerMenu menuItems={menuItems} />
       {children}
     </>
   );

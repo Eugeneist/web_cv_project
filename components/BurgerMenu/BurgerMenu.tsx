@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { NavigationProps } from '../Navbar/Navbar';
-import { useScrollPoint } from '@/hooks';
+import { useScrollPoint, useScrollLock } from '@/hooks';
 import { Button } from '@/components';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,17 +15,24 @@ const BurgerMenu: React.FC<NavigationProps> = ({ menuItems }) => {
 
   const isScrolled = useScrollPoint({ point: 30 });
 
+  const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
+  useScrollLock({ ref, skip: !isMobileMenuOpen });
+  // const targetRef = useRef(null);
+
   const toggleMobileMenu = useCallback(() => {
-    setMobileMenuOpen((prevState) => !prevState);
     if (typeof window != 'undefined' && window.document) {
+      // const body = document.body;
+      // const targetElement = document.querySelector('#burger_menu');
       document.documentElement.style.overflow = isMobileMenuOpen
         ? 'auto'
         : 'hidden';
+      document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden';
     }
+    setMobileMenuOpen((prevState) => !prevState);
   }, [isMobileMenuOpen]);
 
   return (
-    <nav>
+    <nav ref={ref} id="burger_menu" className={styles.burger_menu}>
       <div
         className={`${styles.mobilemenu} ${
           isMobileMenuOpen ? styles.open : ''

@@ -11,7 +11,7 @@ const CV = () => {
   return (
     <section className={styles.info}>
       <section className={styles.info__sections}>
-        <section className={styles.info__section_about}>
+        <section className={styles.info__sections_section_1}>
           <div className={styles.info__section_box}>
             <article className={styles.info__about}>
               <h2 className={styles.info__title}>
@@ -91,7 +91,7 @@ const CV = () => {
             </div>
           </article>
         </section>
-        <section>
+        <section className={styles.info__sections_section_2}>
           <h2 className={styles.info__title}>
             <Link className={styles.info__link} href="/cv/projects">
               <Button label="Projects" />
@@ -99,7 +99,7 @@ const CV = () => {
           </h2>
           <ProjectsList projects={projects} isFull={false} />
         </section>
-        <section>
+        <section className={styles.info__sections_section_3}>
           <article className={styles.info__skills}>
             <h2 className={styles.info__title}>
               <Link className={styles.info__link} href="/cv/skills">

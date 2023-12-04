@@ -73,7 +73,7 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .mobilemenu {
     display: flex;
   }
@@ -85,5 +85,11 @@
     height: 100vh;
     padding: 3.125rem;
     z-index: 9999;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 1200px) {
+  .mobilemenu {
+    display: flex;
   }
 }

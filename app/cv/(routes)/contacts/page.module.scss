@@ -1,0 +1,53 @@
+@mixin title {
+  font-size: 1.5rem;
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+  color: #d4b44f;
+}
+
+.contacts {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__titlebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+  }
+
+  &__contactbox {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    align-items: self-start;
+    justify-content: center;
+  }
+
+  &__socials {
+    text-align: center;
+  }
+
+  &__form {
+    text-align: center;
+  }
+
+  &__title {
+    @include title;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .contacts {
+    &__contactbox {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -10,3 +10,5 @@ export { SkillList } from './SkillList';
 export { Footer } from './Footer';
 export { Timeline } from './Timeline';
 export { BurgerMenu } from './BurgerMenu';
+export { Socials } from './Socials';
+export { Form } from './Form';

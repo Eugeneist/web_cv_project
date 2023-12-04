@@ -1,5 +1,4 @@
 @mixin sharedListStyles {
-  // width: 15rem;
   background-color: rgba(51, 51, 49, 0.8);
   border-radius: 1.563rem;
   padding: 0.938rem;
@@ -10,7 +9,7 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0.625rem;
+  padding: 0.625rem 2.5rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -21,6 +20,7 @@
     display: flex;
     justify-content: space-around;
     gap: 0.313rem;
+    flex: 1;
   }
 
   &__about {
@@ -130,4 +130,54 @@
 
 .colored {
   color: #f4e6c2;
+}
+
+@media all and (max-width: 1200px) {
+  .info {
+    &__sections {
+      display: grid;
+      grid-template-areas:
+        'about skills'
+        'projects projects';
+
+      &_section_1 {
+        grid-area: about;
+      }
+
+      &_section_2 {
+        grid-area: projects;
+      }
+
+      &_section_3 {
+        grid-area: skills;
+      }
+    }
+
+    &__about {
+      &_text {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .info {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+
+    &__sections {
+      grid-template-areas:
+        'about'
+        'skills'
+        'projects';
+    }
+
+    &__education_list,
+    &__skills_list,
+    &__contacts_list,
+    &__languages_list {
+      padding-left: 3.875rem;
+    }
+  }
 }

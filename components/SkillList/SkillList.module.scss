@@ -33,3 +33,11 @@
     padding: 0;
   }
 }
+
+@media all and (max-width: 1000px) {
+  .skills {
+    &__list {
+      grid-template-columns: 15rem 15rem 15rem;
+    }
+  }
+}

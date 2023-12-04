@@ -55,3 +55,10 @@
 .button:hover .label::after {
   opacity: 1;
 }
+
+@media all and (max-width: 1000px) {
+  .button {
+    width: 16rem;
+    font-size: 2rem;
+  }
+}

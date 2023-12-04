@@ -162,3 +162,9 @@
     color: #d4b44f;
   }
 }
+
+@media all and (max-width: 1200px) {
+  .project_min {
+    max-width: 57rem;
+  }
+}

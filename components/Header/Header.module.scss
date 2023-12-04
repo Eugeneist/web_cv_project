@@ -33,3 +33,17 @@
     color: #f5efdf;
   }
 }
+
+@media all and (max-width: 1000px) {
+  .header {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      align-self: center;
+      width: 173px;
+      height: 160px;
+    }
+  }
+}

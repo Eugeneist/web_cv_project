@@ -32,3 +32,15 @@
     display: none;
   }
 }
+
+@media (orientation: portrait) and (max-width: 850px) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .navigation {
+    display: none;
+  }
+}
