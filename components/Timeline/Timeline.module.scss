@@ -63,3 +63,37 @@
     }
   }
 }
+
+@media all and (max-width: 800px) {
+  .timeline {
+    &__container {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__item {
+      width: 100%;
+      padding: 1rem;
+      align-self: center;
+      text-align: start;
+      flex-direction: row;
+      z-index: 50;
+
+      &:nth-child(even) article {
+        flex-direction: row;
+      }
+
+      &:nth-child(odd) {
+        &::after,
+        &::before {
+          content: none;
+        }
+      }
+
+      &::after,
+      &::before {
+        content: none;
+      }
+    }
+  }
+}

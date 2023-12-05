@@ -33,7 +33,7 @@
   }
 
   &__textbox {
-    padding: 50px;
+    padding: 3.125rem;
     background-color: rgba(51, 51, 49, 0.8);
     border-radius: 1.563rem;
     transition: all 0.5s ease;
@@ -51,4 +51,46 @@
 
 .colored {
   color: #f4e6c2;
+}
+
+@media all and (max-width: 1150px) {
+  .about {
+    &__summary {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(2) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .about {
+    font-size: 2rem;
+    line-height: 2.6rem;
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__summary {
+      padding: 2rem;
+
+      &:nth-child(even) {
+        padding: 2rem;
+      }
+
+      &:nth-child(odd) {
+        padding: 2rem;
+      }
+    }
+
+    &__list {
+      padding-left: 1.5rem;
+    }
+  }
 }

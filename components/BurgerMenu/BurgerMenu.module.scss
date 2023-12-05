@@ -73,7 +73,7 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .mobilemenu {
     display: flex;
   }
@@ -91,5 +91,23 @@
 @media (orientation: portrait) and (max-width: 1200px) {
   .mobilemenu {
     display: flex;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .mobilemenu {
+    &__buttonbox {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        font-size: 2rem !important;
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

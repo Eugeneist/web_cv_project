@@ -33,7 +33,7 @@
   }
 }
 
-@media (orientation: portrait) and (max-width: 850px) {
+@media all and (max-width: 1000px) {
   .navigation {
     display: none;
   }

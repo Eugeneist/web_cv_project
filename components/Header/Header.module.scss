@@ -47,3 +47,12 @@
     }
   }
 }
+
+@media (orientation: landscape) and (min-width: 700px) {
+  .header {
+    height: 50vh;
+    &__inner {
+      flex-direction: row;
+    }
+  }
+}

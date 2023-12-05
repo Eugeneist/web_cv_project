@@ -26,3 +26,17 @@
   top: -5%;
   z-index: 3;
 }
+
+@media all and (max-width: 1350px) {
+  .animated_blob_container {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .animated_blob_container {
+    width: 300px;
+    height: 300px;
+  }
+}

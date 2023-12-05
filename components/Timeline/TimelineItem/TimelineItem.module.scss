@@ -41,3 +41,13 @@
     }
   }
 }
+
+@media all and (max-width: 800px) {
+  .timeline_item {
+    background-color: rgba(51, 51, 49, 1);
+
+    &__title {
+      font-size: 2.3rem;
+    }
+  }
+}
