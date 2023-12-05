@@ -19,6 +19,11 @@
 
 @media all and (max-width: 1000px) {
   .socials {
+    &__navicon {
+      width: 5rem;
+      height: 5rem;
+    }
+
     &__navlist {
       flex-direction: row !important;
       margin-bottom: 5rem;

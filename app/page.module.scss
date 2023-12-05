@@ -70,14 +70,15 @@
       flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
+      height: 100%;
     }
 
     &__image_container {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       overflow: hidden;
       border-radius: 50%;
-      margin-bottom: 5rem;
+      margin-bottom: 0.1rem;
       overflow: hidden;
     }
 
@@ -100,6 +101,12 @@
         padding: 5rem;
         border-radius: 10px;
       }
+
+      button {
+        span::after {
+          content: '';
+        }
+      }
     }
 
     &__action {
@@ -107,6 +114,41 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .mainpage {
+    font-size: 1.3rem;
+  }
+
+  .home {
+    &__inner {
+      height: 100%;
+    }
+
+    &__image_container {
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-bottom: 0.1rem;
+      overflow: hidden;
+    }
+
+    &__textbox {
+      :first-child {
+        font-size: 4rem;
+      }
+
+      :nth-child(3) {
+        font-size: 3rem;
+      }
+
+      :last-child {
+        font-size: 2rem;
+      }
     }
   }
 }

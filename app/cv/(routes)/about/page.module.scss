@@ -7,7 +7,7 @@
   justify-content: center;
   flex-direction: column;
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.6rem;
 
   &__summary {
     display: flex;
@@ -55,23 +55,19 @@
 
 @media all and (max-width: 1150px) {
   .about {
+    font-size: 2rem;
+    line-height: 2.6rem;
+
     &__summary {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
 
       &:nth-child(2) {
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
     }
-  }
-}
-
-@media all and (max-width: 700px) {
-  .about {
-    font-size: 2rem;
-    line-height: 2.6rem;
 
     &__title {
       font-size: 3rem;

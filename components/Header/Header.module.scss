@@ -56,3 +56,17 @@
     }
   }
 }
+
+@media (orientation: portrait) and (max-width: 1200px) {
+  .header {
+    height: 20vh;
+
+    &__image {
+      display: none;
+    }
+
+    &__inner_textbox {
+      padding-bottom: 2rem;
+    }
+  }
+}
