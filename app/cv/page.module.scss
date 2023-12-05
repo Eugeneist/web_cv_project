@@ -134,6 +134,7 @@
 
 @media all and (max-width: 1200px) {
   .info {
+    padding: 3rem 1rem;
     &__sections {
       display: grid;
       grid-template-areas:
