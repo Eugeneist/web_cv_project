@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     .then((body) => sendRouteSchema.parse(body));
 
   const data = await resend.emails.send({
-    from: 'yevhenrudofylov@cvwebsite.com',
+    from: 'onboarding@resend.dev',
     to: 'rudofiloveugene@gmail.com',
     subject: `${name} has a message!`,
     react: Email({ name, emailAddress, content }),

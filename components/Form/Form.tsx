@@ -1,6 +1,7 @@
 'use client';
 
 import * as z from 'zod';
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import styles from './Form.module.scss';
@@ -21,10 +22,18 @@ const Form = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
+
+  const [isMessageSent, setMessageSent] = useState(false);
+
+  const showMessageSended = () => {
+    setMessageSent(true);
+    setTimeout(() => setMessageSent(false), 3000);
+  };
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     await fetch('/api/send', {
@@ -35,6 +44,9 @@ const Form = () => {
         content: values.content,
       }),
     });
+
+    reset();
+    showMessageSended();
   }
 
   return (
@@ -103,6 +115,9 @@ const Form = () => {
               Send Message
             </button>
           </div>
+          {isMessageSent && (
+            <p className={styles.form__success}>Message sent successfully!</p>
+          )}
         </form>
       </div>
     </section>
