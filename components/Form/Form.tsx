@@ -1,8 +1,8 @@
 'use client';
 
-// import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
 import * as z from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
 import styles from './Form.module.scss';
 
 const formSchema = z.object({
@@ -23,7 +23,7 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<z.infer<typeof formSchema>>({
-    // resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema),
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {

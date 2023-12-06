@@ -1,0 +1,22 @@
+.email {
+  background-color: aliceblue;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #000;
+  padding: 20px;
+
+  &__container {
+    border: 1px solid #000;
+    padding: 20px;
+  }
+
+  &__content {
+    padding: 20px;
+    border: 1px solid #000;
+  }
+
+  &__contacts {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

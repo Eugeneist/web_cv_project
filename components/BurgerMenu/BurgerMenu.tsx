@@ -34,9 +34,11 @@ const BurgerMenu: React.FC<NavigationProps> = ({ menuItems }) => {
   return (
     <nav ref={ref} id="burger_menu" className={styles.burger_menu}>
       <div
-        className={`${styles.mobilemenu} ${
-          isMobileMenuOpen ? styles.open : ''
-        } ${isScrolled ? styles.visible : ''}`}
+        className={`${styles.mobilemenu}
+        ${isMobileMenuOpen ? styles.open : ''} ${
+          isScrolled ? styles.visible : ''
+        }
+        `}
       >
         <button
           className={`${

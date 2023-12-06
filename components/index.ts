@@ -12,3 +12,4 @@ export { Timeline } from './Timeline';
 export { BurgerMenu } from './BurgerMenu';
 export { Socials } from './Socials';
 export { Form } from './Form';
+export { Email } from './Email';
