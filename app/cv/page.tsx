@@ -66,7 +66,7 @@ const CV = () => {
           </article>
           <article className={styles.info__more}>
             <h2 className={styles.info__title}>
-              <Link className={styles.info__link} href="/cv/more">
+              <Link className={styles.info__link} href="/cv/">
                 <Button label="Languages" />
               </Link>
             </h2>
@@ -82,7 +82,7 @@ const CV = () => {
           </article>
           <article className={styles.info__more}>
             <h2 className={styles.info__title}>
-              <Link className={styles.info__link} href="/cv/more">
+              <Link className={styles.info__link} href="/cv/">
                 <Button label="More" />
               </Link>
             </h2>
@@ -138,7 +138,7 @@ const CV = () => {
           </article>
           <article className={styles.info__softskills}>
             <h2 className={styles.info__title}>
-              <Link className={styles.info__link} href="/cv/languages">
+              <Link className={styles.info__link} href="/cv/">
                 <Button label="Soft skills" />
               </Link>
             </h2>
