@@ -67,6 +67,22 @@ const CV = () => {
           <article className={styles.info__more}>
             <h2 className={styles.info__title}>
               <Link className={styles.info__link} href="/cv/more">
+                <Button label="Languages" />
+              </Link>
+            </h2>
+            <ul className={styles.info__languages_list}>
+              <li>
+                <span className={styles.colored}>English</span> -
+                Intermediate(B2)
+              </li>
+              <li>
+                <span className={styles.colored}>Ukrainian</span> - Native
+              </li>
+            </ul>
+          </article>
+          <article className={styles.info__more}>
+            <h2 className={styles.info__title}>
+              <Link className={styles.info__link} href="/cv/more">
                 <Button label="More" />
               </Link>
             </h2>
@@ -85,14 +101,13 @@ const CV = () => {
                   <Image src={cv} width={32} height={32} alt="cv link" />
                 </Link>
               </div>
-              <Link className={styles.info__link} href="/">
-                <Button label="GO HOME" />
-              </Link>
             </div>
           </article>
         </section>
         <section className={styles.info__sections_section_2}>
-          <h2 className={styles.info__title}>
+          <h2
+            className={`${styles.info__title} ${styles.info__title_projects}`}
+          >
             <Link className={styles.info__link} href="/cv/projects">
               <Button label="Projects" />
             </Link>
@@ -121,20 +136,18 @@ const CV = () => {
               <li>Flex/GRID technologies</li>
             </ul>
           </article>
-          <article className={styles.info__languages}>
+          <article className={styles.info__softskills}>
             <h2 className={styles.info__title}>
               <Link className={styles.info__link} href="/cv/languages">
-                <Button label="Languages" />
+                <Button label="Soft skills" />
               </Link>
             </h2>
-            <ul className={styles.info__languages_list}>
-              <li>
-                <span className={styles.colored}>English</span> -
-                Intermediate(B2)
-              </li>
-              <li>
-                <span className={styles.colored}>Ukrainian</span> - Native
-              </li>
+            <ul className={styles.info__softskills_list}>
+              <li>Problem solver</li>
+              <li>Responsible</li>
+              <li>Organized</li>
+              <li>Teamworker</li>
+              <li>Quick learner</li>
             </ul>
           </article>
           <nav className={styles.info__contacts}>

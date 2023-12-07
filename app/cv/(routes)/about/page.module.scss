@@ -35,17 +35,13 @@
   &__textbox {
     padding: 3.125rem;
     background-color: rgba(51, 51, 49, 0.8);
-    border-radius: 1.563rem;
+    border-radius: 0.3rem;
     transition: all 0.5s ease;
 
     &:hover {
       transition: all 0.5s ease;
       background-color: rgba(51, 51, 49, 1);
     }
-  }
-
-  &__text {
-    max-width: 35rem;
   }
 }
 
@@ -55,7 +51,7 @@
 
 @media all and (max-width: 1150px) {
   .about {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2.6rem;
     padding: 5rem 0.2rem;
 

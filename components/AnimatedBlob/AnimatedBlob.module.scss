@@ -27,10 +27,17 @@
   z-index: 3;
 }
 
-@media all and (max-width: 1350px) {
+@media all and (max-width: 1400px) {
   .animated_blob_container {
     width: 500px;
     height: 500px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .animated_blob_container {
+    width: 400px;
+    height: 400px;
   }
 }
 
