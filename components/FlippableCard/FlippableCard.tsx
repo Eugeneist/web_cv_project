@@ -25,10 +25,15 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
     setSide(false);
   };
 
+  const handleClick = () => {
+    setSide((prevSide) => !prevSide);
+  };
+
   return (
     <li
       onMouseEnter={handleFlipEnter}
       onMouseLeave={handleFlipLeave}
+      onTouchStart={handleClick}
       className={`${styles.flippable_card__container} ${
         side ? styles.flipped : ''
       }`}
@@ -46,7 +51,7 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
       </div>
       <div className={styles.flippable_card__back}>
         <h3 className={styles.flippable_card__back_title}>{title}</h3>
-        <p>{description}</p>
+        <p className={styles.flippable_card__back_text}>{description}</p>
       </div>
     </li>
   );

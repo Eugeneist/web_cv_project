@@ -1,0 +1,29 @@
+.notfound {
+  width: 100%;
+  min-height: 100vh;
+  align-self: center;
+  margin: 0 auto;
+  padding: 3.125rem 5rem 2.5rem 5rem;
+  background-color: rgba(51, 51, 49, 0.9);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #f4e6c2;
+
+  &__inner {
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__title2 {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+
+    span {
+      color: #d4b44f;
+    }
+  }
+}

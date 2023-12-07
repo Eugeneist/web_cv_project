@@ -41,3 +41,11 @@
     }
   }
 }
+
+@media all and (max-width: 500px) {
+  .skills {
+    &__list {
+      grid-template-columns: 15rem 15rem;
+    }
+  }
+}

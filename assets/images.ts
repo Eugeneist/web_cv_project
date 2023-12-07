@@ -47,8 +47,8 @@ export { default as cv } from '@/assets/cv.svg';
 
 //EDUCATION
 
-export { default as hillel } from '@/assets/education/hillel.jpg';
-export { default as khpi } from '@/assets/education/ntukhpi.jpg';
+export { default as hillel } from '@/assets/education/hillel.png';
+export { default as khpi } from '@/assets/education/ntukhpi.png';
 export { default as donnuet } from '@/assets/education/donnuet.png';
 
 // MENU

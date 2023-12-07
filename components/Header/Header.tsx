@@ -1,6 +1,7 @@
 import styles from './Header.module.scss';
 import Image from 'next/image';
 import author from '../../assets/author.png';
+import glasses from '../../assets/glasses.png';
 
 const Header: React.FC = () => {
   return (
@@ -9,6 +10,13 @@ const Header: React.FC = () => {
         <Image
           className={styles.header__image}
           src={author}
+          height={260}
+          alt="Picture of the author"
+        />
+        <Image
+          id="glasses"
+          className={styles.header__image__glasses}
+          src={glasses}
           height={260}
           alt="Picture of the author"
         />
