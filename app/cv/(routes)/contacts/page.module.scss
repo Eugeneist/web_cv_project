@@ -51,3 +51,16 @@
     }
   }
 }
+
+@media (orientation: portrait) {
+  .contacts {
+    &__contactbox {
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+
+    &__socials {
+      display: none;
+    }
+  }
+}

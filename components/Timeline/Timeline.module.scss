@@ -72,6 +72,10 @@
       justify-content: center;
     }
 
+    article {
+      flex-direction: column;
+    }
+
     &__item {
       width: 100%;
       padding: 1rem;
@@ -81,19 +85,23 @@
       z-index: 2;
 
       &:nth-child(even) article {
-        flex-direction: row;
+        flex-direction: column;
       }
 
-      &:nth-child(odd) {
+      &:nth-child(odd),
+      &:nth-child(even) {
         &::after,
         &::before {
           content: none;
         }
+        padding: 0 0 2rem 0;
       }
 
       &::after,
       &::before {
         content: none;
+        left: 0;
+        right: 0;
       }
     }
   }

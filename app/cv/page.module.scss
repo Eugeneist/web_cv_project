@@ -169,7 +169,7 @@
   }
 }
 
-@media ((orientation: portrait)) {
+@media (orientation: portrait) {
   .info {
     &__about {
       max-width: none;

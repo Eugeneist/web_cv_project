@@ -19,7 +19,7 @@ const ContactsPage = () => {
             direction={FlexDirection.COLUMN}
             width={60}
             height={60}
-            gap={45}
+            gap={85}
           />
         </div>
         <div className={styles.contacts__form}>
