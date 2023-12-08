@@ -1,19 +1,27 @@
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   padding: 1rem;
   background-color: #000;
   color: #d4b44f;
   text-transform: uppercase;
-  height: 10vh;
+  vertical-align: middle;
+  min-height: 7vh;
+
+  &__inner {
+    position: relative;
+  }
 }
 
 .desktopmenu {
+  max-width: 1440px;
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 4rem;
   margin: 0 auto;
 }
 
@@ -27,20 +35,43 @@
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .navigation {
-    display: none;
+@media (min-width: 1441px) {
+  .desktopmenu {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .desktopmenu {
+    justify-content: center;
+    padding: 0 2rem;
   }
 }
 
 @media all and (max-width: 1000px) {
   .navigation {
+    min-height: 4vh;
+    padding: 0.5rem;
+  }
+
+  .navigation__inner {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .desktopmenu {
     display: none;
   }
 }
 
 @media (orientation: portrait) {
-  .navigation {
+  .navigation__inner {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .desktopmenu {
     display: none;
   }
 }

@@ -21,3 +21,9 @@
     gap: 0.125rem;
   }
 }
+
+@media (max-width: 400px) {
+  .footer {
+    font-size: 1rem;
+  }
+}

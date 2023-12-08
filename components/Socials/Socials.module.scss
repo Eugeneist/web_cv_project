@@ -30,3 +30,12 @@
     }
   }
 }
+
+@media (orientation: portrait) and (max-width: 1000px) {
+  .socials {
+    &__navicon {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

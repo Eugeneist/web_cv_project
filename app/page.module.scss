@@ -118,6 +118,24 @@
   }
 }
 
+@media all and (max-width: 1200px) {
+  .mainpage {
+    font-size: 1.8rem;
+  }
+
+  .home {
+    &__textbox {
+      :first-child {
+        font-size: 7rem;
+      }
+
+      :last-child {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
 @media (orientation: landscape) and (max-width: 1000px) {
   .mainpage {
     font-size: 1.3rem;

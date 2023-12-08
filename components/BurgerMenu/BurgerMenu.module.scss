@@ -1,3 +1,14 @@
+@mixin button {
+  max-width: 100%;
+  display: inline-block;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  transition: width 0.3s ease;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -20,14 +31,45 @@
   }
 }
 
+.burgermenu {
+  display: none;
+  background-color: transparent;
+  padding: 1rem;
+
+  &__openbutton {
+    position: relative;
+    top: 0;
+    right: 0;
+    @include button;
+    padding-right: 2rem;
+  }
+
+  &__closebutton {
+    top: 0;
+    right: 0;
+    @include button;
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+
+    transition: all 0.4s ease;
+
+    &:hover {
+      transition: all 0.4s ease;
+      transform: scale(1.1);
+    }
+  }
+}
+
 .mobilemenu {
   display: none;
-  position: fixed;
-  top: 3.125rem;
-  right: 3.125rem;
   background-color: #000;
   background-image: url(../../assets/background.PNG);
   z-index: 1001;
+  padding: 2rem;
+  padding-right: 4rem;
 
   &__buttonbox {
     display: flex;
@@ -40,29 +82,11 @@
     }
   }
 
-  &__openbutton {
-    width: 4.375rem;
-    height: 4.375rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  &__closebutton {
-    width: 4.375rem;
-    height: 4.375rem;
-    position: absolute;
-    top: 3.2rem;
-    right: 4.5rem;
-  }
-
-  &__icon {
-    transition: all 0.4s ease;
-
-    &:hover {
-      transition: all 0.4s ease;
-      transform: scale(1.1);
-    }
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
   }
 }
 
@@ -71,17 +95,20 @@
 }
 
 .open {
+  position: fixed;
+  display: flex;
+  align-items: baseline;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 3.125rem;
+  padding: 2rem;
   z-index: 9999;
   animation: appear 0.3s ease-in-out;
 }
 
 .close {
-  animation: appear 0.3s ease-in-out;
+  animation: desappear 0.3s ease-in-out;
 }
 
 .mobilemenu button {
@@ -101,17 +128,8 @@
 }
 
 @media (max-width: 1000px) {
-  .mobilemenu {
+  .burgermenu {
     display: flex;
-  }
-
-  .open {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 3.125rem;
-    z-index: 9999;
   }
 }
 
@@ -123,26 +141,60 @@
   animation: slideInClose 0.3s ease-in-out;
 }
 
-@media (orientation: portrait) and (max-width: 1200px) {
-  .mobilemenu {
+@media (orientation: portrait) {
+  .burgermenu {
     display: flex;
   }
 }
 
 @media (orientation: landscape) and (max-width: 1000px) {
   .mobilemenu {
+    padding: 2rem 1rem 0 1rem;
+
     &__buttonbox {
       display: flex;
       flex-direction: column;
 
       button {
-        font-size: 2rem !important;
+        max-width: 50%;
+        font-size: 1rem !important;
       }
     }
 
+    .open {
+      position: fixed;
+      display: flex;
+      top: 0;
+      left: 0;
+      visibility: visible;
+      width: 100vw;
+      height: 100vh;
+      padding: 2rem;
+      z-index: 9999;
+      animation: appear 0.3s ease-in-out;
+    }
+
     &__list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .burgermenu {
+    padding: 0.3rem;
+    &__icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .burgermenu {
+    padding: 0.3rem;
+    &__icon {
+      width: 25px;
+      height: 25px;
     }
   }
 }
