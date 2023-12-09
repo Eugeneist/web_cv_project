@@ -25,7 +25,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({
           variant = true,
         }) => (
           <li
-            style={{ paddingBottom: `${isFull ? '10rem' : '0.625rem'}` }}
+            style={{ paddingBottom: `${isFull ? '10rem' : '1.3rem'}` }}
             className={styles.projectslist__item}
             key={id}
           >

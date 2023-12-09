@@ -1,4 +1,6 @@
-import { clearAllBodyScrollLocks, enableBodyScroll } from 'body-scroll-lock';
+'use client';
+
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import { useEffect } from 'react';
 
 type useScrollLockProps = {
@@ -6,16 +8,14 @@ type useScrollLockProps = {
   skip?: boolean;
 };
 
-const useScrollLock = ({ ref, skip }: useScrollLockProps): void => {
+const useScrollLock = (): void => {
   useEffect(() => {
-    if (ref.current && !skip) {
-      enableBodyScroll(ref.current);
-    } else {
-      clearAllBodyScrollLocks();
-    }
+    disableBodyScroll(document.body);
 
-    return clearAllBodyScrollLocks;
-  }, [ref, skip]);
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, []);
 };
 
 export default useScrollLock;

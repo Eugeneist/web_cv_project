@@ -7,7 +7,7 @@ import author from '../assets/hero_author.png';
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.home__wrapper}>
       <header>
         <Navbar menuItems={menuItems} />
       </header>
@@ -31,13 +31,13 @@ export default function Home() {
                 className={styles.home__image}
                 src={author}
                 quality={100}
-                height={463}
+                width={448}
                 alt="Picture of the author"
               />
             </div>
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }

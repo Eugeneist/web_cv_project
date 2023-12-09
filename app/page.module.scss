@@ -34,9 +34,18 @@
     justify-content: center;
   }
 
+  &__wrapper {
+    overflow: hidden;
+  }
+
   &__textbox {
+    letter-spacing: 0.2rem;
     :first-child {
-      font-size: 8rem;
+      font-size: 5rem;
+    }
+
+    h1 {
+      font-size: 5.5rem;
     }
 
     :last-child {
@@ -98,7 +107,7 @@
         font-size: 2.1rem;
         font-weight: bold;
         width: 30rem;
-        padding: 5rem;
+        padding: 3rem;
         border-radius: 10px;
       }
 
@@ -118,7 +127,29 @@
   }
 }
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1400px) {
+  .mainpage {
+    font-size: 2.3rem;
+  }
+
+  .home {
+    &__textbox {
+      :first-child {
+        font-size: 4rem;
+      }
+
+      h1 {
+        font-size: 4.5rem;
+      }
+
+      :last-child {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1300px) {
   .mainpage {
     font-size: 1.8rem;
   }
@@ -126,44 +157,36 @@
   .home {
     &__textbox {
       :first-child {
-        font-size: 7rem;
+        font-size: 3rem;
+      }
+
+      h1 {
+        font-size: 3.5rem;
       }
 
       :last-child {
         font-size: 2rem;
       }
     }
+
+    &__image_container {
+      :first-child {
+        width: 21rem;
+        height: 27.25rem;
+      }
+    }
   }
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
-  .mainpage {
-    font-size: 1.3rem;
-  }
-
+@media all and (max-width: 850px) {
   .home {
-    height: 100vh;
-
-    &__inner {
-      height: 100%;
-    }
-
-    &__image_container {
-      width: 250px;
-      height: 250px;
-      overflow: hidden;
-      border-radius: 50%;
-      margin-bottom: 0.1rem;
-      overflow: hidden;
-    }
-
     &__textbox {
       :first-child {
-        font-size: 4rem;
+        font-size: 2.8rem;
       }
 
-      :nth-child(3) {
-        font-size: 3rem;
+      h1 {
+        font-size: 3.2rem;
       }
 
       :last-child {

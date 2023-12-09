@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Chivo_Mono } from '@next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+export const chivo_mono = Chivo_Mono({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 export const metadata: Metadata = {
   title: 'Yevhen Rudofylov | CV website',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={chivo_mono.className}>{children}</body>
     </html>
   );
 }

@@ -1,9 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { useState, useEffect, useCallback } from 'react';
 import { NavigationProps } from '../Navbar/Navbar';
-import { useScrollPoint, useScrollLock } from '@/hooks';
 import { Button } from '@/components';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,14 +11,8 @@ import styles from './BurgerMenu.module.scss';
 const BurgerMenu: React.FC<NavigationProps> = ({ menuItems }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
-  useScrollLock({ ref, skip: !isMobileMenuOpen });
-  // const targetRef = useRef(null);
-
   const toggleMobileMenu = useCallback(() => {
     if (typeof window != 'undefined' && window.document) {
-      // const body = document.body;
-      // const targetElement = document.querySelector('#burger_menu');
       document.documentElement.style.overflow = isMobileMenuOpen
         ? 'visible'
         : 'hidden';
@@ -30,7 +22,7 @@ const BurgerMenu: React.FC<NavigationProps> = ({ menuItems }) => {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav ref={ref} id="burger_menu" className={styles.burgermenu}>
+    <nav id="burger_menu" className={styles.burgermenu}>
       <button
         className={styles.burgermenu__openbutton}
         onClick={toggleMobileMenu}
