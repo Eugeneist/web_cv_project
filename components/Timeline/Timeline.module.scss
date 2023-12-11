@@ -43,7 +43,7 @@
       z-index: 2;
     }
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       justify-content: flex-start;
       text-align: start;
       align-items: start;
@@ -58,7 +58,7 @@
       }
     }
 
-    &:nth-child(even) article {
+    &:nth-child(odd) article {
       flex-direction: row-reverse;
     }
   }

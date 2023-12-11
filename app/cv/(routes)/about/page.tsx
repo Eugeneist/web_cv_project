@@ -7,6 +7,9 @@ import Link from 'next/link';
 const AboutPage = () => {
   return (
     <section className={styles.about}>
+      <div className={styles.about__titlebox}>
+        <h1 className={styles.about__pagetitle}>/About me:/</h1>
+      </div>
       <article className={styles.about__summary}>
         <div className={styles.about__textbox}>
           <h2 className={styles.about__title}>Summary</h2>

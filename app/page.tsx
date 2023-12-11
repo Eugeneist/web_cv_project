@@ -22,9 +22,18 @@ export default function Home() {
                 <p className={styles.home__text}>and I am</p>
                 <h2>a Frontend Developer</h2>
               </div>
-              <Link className={styles.home__button} href="/cv">
-                <Button label="Watch CV" />
-              </Link>
+              <nav className={styles.home__buttonbox}>
+                <Link id="cv" className={styles.home__button} href="/cv">
+                  <Button label="Watch CV" />
+                </Link>
+                <Link
+                  id="discover"
+                  className={styles.home__button}
+                  href="/cv/about"
+                >
+                  <Button label="Discover Me" />
+                </Link>
+              </nav>
             </div>
             <div className={styles.home__image_container}>
               <Image

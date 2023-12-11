@@ -7,4 +7,14 @@
   justify-content: center;
   flex-direction: column;
   line-height: 1.25rem;
+
+  &__titlebox {
+    text-align: end;
+    padding: 3rem;
+  }
+
+  &__pagetitle {
+    font-size: 3rem;
+    color: #d4b44f;
+  }
 }

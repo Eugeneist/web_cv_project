@@ -109,6 +109,10 @@
       align-items: center;
       justify-content: space-around;
       gap: 0.375rem;
+
+      button {
+        animation: none;
+      }
     }
 
     &_cv {

@@ -13,3 +13,4 @@ export { BurgerMenu } from './BurgerMenu';
 export { Socials } from './Socials';
 export { Form } from './Form';
 export { Email } from './Email';
+export { NavButton } from './NavButton';

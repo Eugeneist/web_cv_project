@@ -42,12 +42,36 @@
   &__title {
     @include title;
   }
+
+  &__pagetitle {
+    font-size: 2rem;
+  }
 }
 
 @media all and (max-width: 1000px) {
   .contacts {
     &__contactbox {
       grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .contacts {
+    &__pagetitle {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .contacts {
+    &__pagetitle {
+      font-size: 1.4rem;
+    }
+
+    &__title {
+      font-size: 1.2rem;
     }
   }
 }

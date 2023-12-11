@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components';
-import { Certificate } from '@/components';
-import { ProjectsList } from '@/components';
+import { Button, NavButton, Certificate, ProjectsList } from '@/components';
 import { cerificates, projects } from '@/data/data';
 import styles from './page.module.scss';
 import { cv } from '@/assets/images';
@@ -101,6 +99,7 @@ const CV = () => {
                   <Image src={cv} width={32} height={32} alt="cv link" />
                 </Link>
               </div>
+              <NavButton title="Discover me" />
             </div>
           </article>
         </section>

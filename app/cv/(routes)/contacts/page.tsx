@@ -7,7 +7,9 @@ const ContactsPage = () => {
   return (
     <section className={styles.contacts}>
       <div className={styles.contacts__titlebox}>
-        <h2 className={styles.contacts__title}>
+        <h2
+          className={`${styles.contacts__title} ${styles.contacts__pagetitle}`}
+        >
           Want to contact me? / Have questions?
         </h2>
       </div>

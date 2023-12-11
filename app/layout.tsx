@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Chivo_Mono } from '@next/font/google';
+import { Chivo_Mono } from 'next/font/google';
 import './globals.css';
 
 export const chivo_mono = Chivo_Mono({

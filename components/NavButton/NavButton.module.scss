@@ -1,0 +1,39 @@
+@keyframes push {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(5px);
+  }
+}
+
+.navbutton {
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: start;
+  border: 1px solid #d4b44f;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  color: #d4b44f;
+  transition: width 0.4s ease;
+  animation: push 2s infinite;
+
+  &:hover {
+    color: #000;
+    background-color: #d4b44f;
+    transition: width 0.4s ease;
+  }
+}

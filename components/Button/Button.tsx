@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes } from 'react';
-import { Chivo_Mono } from '@next/font/google';
+import { Chivo_Mono } from 'next/font/google';
 import styles from './Button.module.scss';
 
 export const chivo_mono = Chivo_Mono({
