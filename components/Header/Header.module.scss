@@ -33,6 +33,15 @@
     text-transform: uppercase;
     font-size: 1.8rem;
     color: #f5efdf;
+    padding-bottom: 1rem;
+  }
+
+  &__link {
+    :first-child {
+      background-color: transparent;
+      font-size: 0.9rem;
+      text-align: center;
+    }
   }
 
   &__image {
