@@ -281,3 +281,43 @@
     }
   }
 }
+
+@media (max-height: 450px) and (max-width: 900px) {
+  .mainpage {
+    font-size: 1.2rem;
+  }
+
+  .home {
+    &__textbox {
+      padding-bottom: 2.5rem;
+
+      :first-child {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      :last-child {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__button {
+      :first-child {
+        font-size: 1.2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 10rem;
+      }
+    }
+
+    &__image_container {
+      :first-child {
+        width: 16rem;
+        height: 21rem;
+      }
+    }
+  }
+}

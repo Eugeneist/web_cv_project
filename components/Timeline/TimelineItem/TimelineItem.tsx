@@ -24,7 +24,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         <Image src={image} width={50} height={50} alt="image" />
       </div>
       <div className={styles.timeline_item__textbox}>
-        <div>
+        <div className={styles.timeline_item__info}>
           <h2 className={styles.timeline_item__title}>{title}</h2>
           <p className={styles.timeline_item__text}>{text}</p>
           <p>

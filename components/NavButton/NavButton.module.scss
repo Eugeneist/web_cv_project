@@ -37,3 +37,9 @@
     transition: width 0.4s ease;
   }
 }
+
+@media all and (max-width: 500px) {
+  .navbutton {
+    font-size: 1.4rem;
+  }
+}

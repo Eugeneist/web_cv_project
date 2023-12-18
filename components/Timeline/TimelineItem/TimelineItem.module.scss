@@ -44,10 +44,28 @@
 
 @media all and (max-width: 800px) {
   .timeline_item {
+    min-width: 40rem;
+    width: 100%;
+    padding: 4.5rem;
     background-color: rgba(51, 51, 49, 1);
+
+    &__textbox {
+      gap: 3rem;
+    }
+
+    &__title {
+      padding-bottom: 2rem;
+    }
 
     &__title {
       font-size: 2.3rem;
     }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .timeline_item {
+    min-width: 40rem;
+    font-size: 1.2rem;
   }
 }

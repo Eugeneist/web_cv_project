@@ -5,3 +5,10 @@
   align-items: center;
   justify-content: end;
 }
+
+@media all and (max-width: 500px) {
+  .navbox {
+    justify-content: center;
+    padding: 5rem;
+  }
+}

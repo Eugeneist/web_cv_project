@@ -223,4 +223,12 @@
       }
     }
   }
+
+  @media all and (max-width: 650px) {
+    .project {
+      &_max {
+        background-color: transparent;
+      }
+    }
+  }
 }
