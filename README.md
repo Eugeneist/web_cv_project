@@ -7,9 +7,9 @@ Developing tools: React, Next.JS v.14.0.2 (app router), TypeScript, SCSS modules
 
 Designed and developed by Yevhen Rudofylov (me).
 
-![hero page](1.jpg)
-![page](2.jpg)
-![page2](3.jpg)
+![hero page](assets/1.jpg)
+![page example](assets/2.jpg)
+![page example](assets/3.jpg)
 
 UKR:
 
