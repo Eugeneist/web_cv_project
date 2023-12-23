@@ -256,43 +256,19 @@
 
 @media (orientation: portrait) and (max-width: 450px) {
   .mainpage {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
   }
 
   .home {
-    &__textbox {
-      padding-bottom: 5rem;
-
-      :first-child {
-        font-size: 2.2rem;
-      }
-
-      h1 {
-        font-size: 2.7rem;
-      }
-
-      :last-child {
-        font-size: 2.2rem;
-      }
+    &__inner {
+      justify-content: start;
     }
 
-    &__buttonbox {
-      flex-direction: column;
-    }
-  }
-}
-
-@media (max-height: 450px) and (max-width: 900px) {
-  .mainpage {
-    font-size: 1.2rem;
-  }
-
-  .home {
     &__textbox {
-      padding-bottom: 2.5rem;
+      padding-bottom: 2.2rem;
 
       :first-child {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
 
       h1 {
@@ -300,13 +276,93 @@
       }
 
       :last-child {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__buttonbox {
+      flex-direction: column;
+    }
+
+    &__buttonbox {
+      gap: 2rem;
+    }
+
+    &__button {
+      :first-child {
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 10rem;
+
+        ::after {
+          content: none;
+        }
+      }
+    }
+
+    &__image_container {
+      :first-child {
+        width: 16rem;
+        height: 21rem;
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) and (max-width: 250px) {
+  .home {
+    &__textbox {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) and (max-width: 200px) {
+  .mainpage {
+    font-size: 1rem;
+  }
+
+  .home {
+    &__textbox {
+      h1 {
         font-size: 1.2rem;
+      }
+
+      :last-child {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-height: 450px) and (max-width: 900px) {
+  .mainpage {
+    font-size: 1.4rem;
+  }
+
+  .home {
+    &__textbox {
+      padding-bottom: 2.2rem;
+
+      :first-child {
+        font-size: 1.4rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      :last-child {
+        font-size: 1.4rem;
       }
     }
 
     &__button {
       :first-child {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         width: 10rem;

@@ -198,3 +198,14 @@
     }
   }
 }
+
+@media all and (max-width: 300px) {
+  .mobilemenu {
+    &__buttonbox {
+      button {
+        width: 10rem !important;
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
