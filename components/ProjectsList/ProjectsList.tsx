@@ -11,9 +11,11 @@ const ProjectsList: React.FC<ProjectsListProps> = ({
   projects,
   isFull = false,
 }) => {
+  const displayedProjects = isFull ? projects : projects.slice(0, 3);
+
   return (
     <ul className={styles.projectslist}>
-      {projects.map(
+      {displayedProjects.map(
         ({
           id,
           title,

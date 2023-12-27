@@ -87,6 +87,7 @@ const Project: React.FC<ProjectProps> = ({
               src={picture}
               width={633}
               height={315}
+              quality={100}
               alt="project pic"
             />
           </Link>

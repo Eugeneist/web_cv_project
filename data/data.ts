@@ -5,6 +5,11 @@ import {
   dizhka,
   cv_website,
   fresh_news,
+  match_game,
+  store,
+  randm,
+  gallery,
+  converter,
   html,
   css,
   sass,
@@ -115,6 +120,93 @@ export const projects = [
       'https://eugeneist.github.io/fresh-news/',
     ],
     picture: fresh_news,
+  },
+  {
+    id: 3,
+    title: 'The Match Game',
+    subtitle: 'The Match game fun application',
+    description:
+      'Small game. Two people are playing a game. From the pile of 25 matches, each player takes either 1, 2 or 3 matches on each turn. The game is over once all matches are taken. Whoever has the even amount of matches wins.',
+    technologies: ['React', 'TypeScript', 'Material UI', 'React Router'],
+    links: [
+      'https://github.com/Eugeneist/test_task_native',
+      'https://thematchgame.netlify.app/',
+    ],
+    picture: match_game,
+  },
+  {
+    id: 4,
+    title: 'eCommerce Store',
+    subtitle: 'eCommerce App or just an online store.',
+    description:
+      'Сhoose products by category, see their personal page, add to favorites and just buy!',
+    technologies: [
+      'React',
+      'JavaScript',
+      'Material UI',
+      'React Router / HashRouter',
+      'Redux Persisit',
+      'React Hook Form',
+      'AXIOS',
+    ],
+    links: [
+      'https://github.com/Eugeneist/eCommerce-App',
+      'https://eugeneist.github.io/eCommerce-App/',
+    ],
+    picture: store,
+  },
+  {
+    id: 5,
+    title: 'Rick and Morty App',
+    subtitle: 'small app, test task',
+    description:
+      'Fun Rick and Morty application. Filter characters and discover them! Login by google.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'react-oauth',
+      'jwt-decode',
+      'AXIOS',
+      'React Router',
+      'SCSS modules',
+    ],
+    links: [
+      'https://github.com/Eugeneist/r_and_m_test',
+      'https://eugeneist.github.io/r_and_m_test/',
+    ],
+    picture: randm,
+  },
+  {
+    id: 6,
+    title: 'Photo Gallery',
+    subtitle: 'Photo Gallery application',
+    description:
+      'Discover photos, add to favorites. One more small app for test task',
+    technologies: [
+      'React',
+      'Styled Components',
+      'AXIOS',
+      'React Router / Hash Router',
+      'React Persist',
+    ],
+    links: [
+      'https://github.com/Eugeneist/photo-gallery',
+      'https://eugeneist.github.io/photo-gallery',
+    ],
+    picture: gallery,
+  },
+  {
+    id: 7,
+    title: 'Currency Converter',
+    subtitle: 'Converter application',
+    description:
+      'My very first pet project. Calculate your currency simple and fast!',
+    technologies: ['React', 'Styled Components', 'AXIOS'],
+    links: [
+      'https://github.com/Eugeneist/Currency-Converter-App',
+      'https://eugeneist.github.io/Currency-Converter-App/',
+    ],
+    picture: converter,
   },
 ];
 

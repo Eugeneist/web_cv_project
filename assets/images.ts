@@ -26,6 +26,11 @@ export { default as photoshop } from '@/assets/skills/photoshop.svg';
 export { default as cv_website } from '@/assets/projects/project_0.png';
 export { default as dizhka } from '@/assets/projects/project_1.jpg';
 export { default as fresh_news } from '@/assets/projects/project_2.png';
+export { default as match_game } from '@/assets/projects/project_3.jpg';
+export { default as store } from '@/assets/projects/project_4.jpg';
+export { default as randm } from '@/assets/projects/project_5.jpg';
+export { default as gallery } from '@/assets/projects/project_6.jpg';
+export { default as converter } from '@/assets/projects/project_7.jpg';
 
 //ABOUT
 
