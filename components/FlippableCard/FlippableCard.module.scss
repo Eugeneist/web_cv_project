@@ -29,6 +29,7 @@
     position: absolute;
     backface-visibility: hidden;
     cursor: pointer;
+    will-change: transform;
     transform-style: preserve-3d;
     transition: -webkit-transform ease 500ms, transform ease 500ms;
   }
