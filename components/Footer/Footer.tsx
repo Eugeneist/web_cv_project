@@ -1,10 +1,10 @@
-import styles from './Footer.module.scss';
-import { Socials } from '@/components';
-import { socials } from '@/data/data';
-
-let currentYear = new Date().getFullYear();
+import styles from "./Footer.module.scss";
+import { Socials } from "@/components";
+import { socials } from "@/data/data";
 
 const Footer: React.FC = () => {
+  let currentYear = new Date().getFullYear();
+
   return (
     <footer className={styles.footer}>
       <section className={styles.footer__inner}>
